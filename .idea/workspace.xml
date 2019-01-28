@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b50ef4a6-9f6f-41f0-a3c8-7c11e24ea0d1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringBootNotes.md" afterPath="$PROJECT_DIR$/SpringBootNotes.md" />
-    </list>
+    <list default="true" id="b50ef4a6-9f6f-41f0-a3c8-7c11e24ea0d1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/springboot_01_helloworld/target/" />
@@ -434,7 +432,7 @@
       <option name="presentableId" value="Default" />
       <updated>1548578938156</updated>
       <workItem from="1548578941785" duration="4903000" />
-      <workItem from="1548660108840" duration="6617000" />
+      <workItem from="1548660108840" duration="7160000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1548580697647</created>
@@ -447,7 +445,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11520000" />
+    <option name="totallyTimeSpent" value="12063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
