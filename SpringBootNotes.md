@@ -1,8 +1,8 @@
 # SpringBoot 总笔记
 <!-- TOC -->
 
-- [一、SpringBoot入门](#一-springboot入门)
-- [二、配置文件](#二-配置文件 )
+- [一、SpringBoot入门](#一springboot入门)
+- [二、配置文件](#二配置文件 )
 
 <!-- /TOC -->
 
