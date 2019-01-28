@@ -1,7 +1,7 @@
 # SpringBoot 总笔记
 
-* [一、SpringBoot入门](#一、SpringBoot入门)
-* [二、配置文件](#二、配置文件)
+- [一、SpringBoot入门](#一、SpringBoot入门)
+- [二、配置文件](#二、配置文件)
 
 ## 一、SpringBoot入门
 
