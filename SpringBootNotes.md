@@ -127,7 +127,7 @@ public class HelloController {
 
 ### 5 、Hello World探究
 
-**①`Pom.xml`文件**
+#### `Pom.xml`文件
 
 父项目
 
@@ -171,7 +171,7 @@ public class HelloController {
 
 `Spring Boot`将所有的功能场景都抽取出来，做成一个个的`starters`（启动器），只需要在项目里面引入这些`starter`相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器。
 
-主程序类，主入口类: 
+#### 主程序类，主入口类 
 
 
 ```java
@@ -186,7 +186,7 @@ public class HelloWorldMainApplication {
 }
 ```
 
-① `@SpringBootApplication`: Spring Boot应用标注在某个类上说明这个类是SpringBoot的<font color = blue>主配置类</font>，SpringBoot就应该运行这个类的`main`方法来启动SpringBoot应用；这是一个<font color = red>组合注解</font>。
+① `@SpringBootApplication`: `Spring Boot`应用标注在某个类上说明这个类是`SpringBoot`的<font color = red>主配置类</font>，`SpringBoot`就应该运行这个类的`main`方法来启动`SpringBoot`应用；这是一个<font color = red>**组合注解**</font>。
 
 ```java
 @Target({ElementType.TYPE})
@@ -209,7 +209,8 @@ public @interface SpringBootApplication {
 }
 ```
 下面看里面的每个注解含义: 
-`@SpringBootConfiguration`: Spring Boot的配置类，标注在某个类上，表示这是一个Spring Boot的配置类，里面包含这个`@Configuration`（也就是Spring里面的配置类）；
+
+* `@SpringBootConfiguration`: `Spring Boot`的配置类，标注在某个类上，表示这是一个`Spring Boot`的配置类，里面包含这个`@Configuration`（也就是`Spring`里面的配置类）；
 
 ```java
 @Target({ElementType.TYPE})
@@ -238,30 +239,31 @@ public @interface Configuration {
 
 ② `@EnableAutoConfiguration`：开启自动配置功能；
 
-以前我们需要配置的东西，Spring Boot帮我们自动配置；`@EnableAutoConfiguration`告诉SpringBoot开启自动配置功能，这样自动配置才能生效；
+以前我们需要配置的东西，`Spring Boot`帮我们自动配置；`@EnableAutoConfiguration`告诉`SpringBoot`开启自动配置功能，这样自动配置才能生效；
 
 ```java
 @AutoConfigurationPackage
 @Import({AutoConfigurationImportSelector.class})
 public @interface EnableAutoConfiguration {
+}
 ```
 
-`@AutoConfigurationPackage`：自动配置包
+* `@AutoConfigurationPackage`：自动配置包
 
-`@Import(AutoConfigurationPackages.Registrar.class)`：Spring的底层注解`@Import`，给容器中导入一个组件；导入的组件由`AutoConfigurationPackages.Registrar.class`<font color = red>将主配置类（`@SpringBootApplication`标注的类）的所在包及下面所有子包里面的所有组件扫描到Spring容器；</font>，所以如果上面的`controller `如果不是在主配置类所在的包(或者子包)下，就不能扫描到。
+  * `@Import(AutoConfigurationPackages.Registrar.class)`：`Spring`的底层注解`@Import`，给容器中导入一个组件；导入的组件由`AutoConfigurationPackages.Registrar.class`指定。
+    也就是: 将主配置类（`@SpringBootApplication`标注的类）的**所在包及下面所有子包里面的所有组件扫描到Spring容器；，所以如果上面的`controller `如果不是在主配置类所在的包(或者子包)下，就不能扫描到。**
 
-`@Import(EnableAutoConfigurationImportSelector.class)`: 给容器中导入组件(不在同一个包下面的)，
-`EnableAutoConfigurationImportSelector`：导入哪些组件的选择器；
-将所有需要导入的组件以全类名的方式返回，这些组件就会被添加到容器中；
-会给容器中导入非常多的自动配置类（`xxxAutoConfiguration`）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181225153433805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=,size_16,color_FFFFFF,t_70)
-有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
-里面调用了下面的一个方法: 
-`SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader)`
-Spring Boot在启动的时候从类路径下的`META-INF/spring.factories`中获取`EnableAutoConfiguration`指定的值，将这些值作为自动配置类导入到容器中，自动配置类就生效，帮我们进行自动配置工作；以前我们需要自己配置的东西，自动配置类都帮我们；
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181225154744548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=,size_16,color_FFFFFF,t_70)
-J2EE的整体整合解决方案和自动配置都在`spring-boot-autoconfigure-xxx.RELEASE.jar`；
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2018122515450993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=,size_16,color_FFFFFF,t_70)
+  ![](images/sb4_import.png)
+* `@Import(EnableAutoConfigurationImportSelector.class)`: 给容器中导入组件(不在同一个包下面的)`EnableAutoConfigurationImportSelector`：导入哪些组件的选择器；将所有需要导入的组件以全类名的方式返回，这些组件就会被添加到容器中；会给容器中导入非常多的自动配置类（`xxxAutoConfiguration`）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；
+    ![在这里插入图片描述](images/sb5_autoconfig.png)
+    有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
+    里面的`getCandidateConfigurations`调用了下面的一个方法: 
+    `SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader)`
+    Spring Boot在启动的时候从类路径下的`META-INF/spring.factories`中获取`EnableAutoConfiguration`指定的值，将这些值作为自动配置类导入到容器中，自动配置类就生效，帮我们进行自动配置工作；以前我们需要自己配置的东西，自动配置类都帮我们；
+
+    ![在这里插入图片描述](images/sb6_spring_factories.png)
+    J2EE的整体整合解决方案和自动配置都在`spring-boot-autoconfigure-xxx.RELEASE.jar`；
+    ![在这里插入图片描述](images/sb7_auto_component.png)
 
 
 ### 6、使用Spring Initializer快速创建Spring Boot项目
