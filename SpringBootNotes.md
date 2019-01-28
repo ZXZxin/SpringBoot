@@ -284,10 +284,55 @@ public @interface EnableAutoConfiguration {
 IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目。选择我们需要的模块，向导会联网创建Spring Boot项目，默认生成的Spring Boot项目；
 主程序生成好了，我们只需要我们自己的逻辑。
 * `resources` : 文件夹中目录结构
-  * `static`：保存所有的静态资源； js css images；
+  * `static`：保存所有的静态资源； `js css images`；
   * `templates`：保存所有的模板页面；（Spring Boot默认`jar`包使用嵌入式的`Tomcat`，默认不支持`JSP`页
     面）；可以使用模板引擎（`freemarker`、`thymeleaf`）；
   * `application.properties`：Spring Boot应用的配置文件，可以修改一些默认设置；
+
+
+
+![QuickStart-SpringBoot](images/sb8_initquick.png)
+
+
+
+![](images/sb9_initquick2.png)
+
+
+
+![](images/sb10_initquick3.png)
+
+
+
+结构目录：
+
+![](images/sb11_quicksimple.png)
+
+简单`Controller`，注意`@RestController`注解。
+
+
+
+```java
+package com.zxin.springboot.controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+//@ResponseBody // 这个类的所有方法返回的数据直接写给浏览器(如果是对象　-> 转成json)
+//@Controller
+
+@RestController // 这个注解的作用和上面两个一起的作用相同 (就是 ResponseBody和Controller的合体)
+public class HelloController {
+
+    @ResponseBody //如果每个类都需要写，麻烦
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello quick SpringBoot!";
+    }
+}
+
+```
+
+
 
 ***
 
