@@ -2,6 +2,12 @@
 <!-- TOC -->
 
 - [一、SpringBoot入门](#一springboot入门)
+  - [1、基本介绍](#1基本介绍)
+  - [2、微服务](#2微服务)
+  - [3、MAVEN设置](#3MAVEN设置)
+  - [4、Spring Boot HelloWorld](#4spring-boot-helloWorld)
+  - [5、Hello World探究](#5hello-world探究)
+  - [6、使用Spring Initializer快速创建Spring Boot项目](#6使用spring-initializer快速创建spring-boot项目)
 - [二、配置文件](#二配置文件 )
 
 <!-- /TOC -->
@@ -30,7 +36,7 @@
 *  微服务：每一个功能元素最终都是一个可独立替换和独立升级的软件单元；
 
 
-### 3 、MAVEN设置
+### 3、MAVEN设置
 给`maven` 的`settings.xml`配置文件的`profiles`标签添加下面的代码：
 
 ```xml
