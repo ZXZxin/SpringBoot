@@ -138,7 +138,7 @@ public class HelloController {
 
 
 
-### 5 、Hello World探究
+### 5、Hello World探究
 
 #### `Pom.xml`文件
 
