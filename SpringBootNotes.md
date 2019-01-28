@@ -1,12 +1,13 @@
 # SpringBoot 总笔记
 <!-- TOC -->
 
-- [一、SpringBoot入门](#1)
-- [二、配置文件](#2)
+- [一、SpringBoot入门](#一-SpringBoot入门)
+- [二、配置文件](#二-配置文件 )
 
 <!-- /TOC -->
 
-## <font id = "1">一、SpringBoot入门
+
+## 一、SpringBoot入门
 
 ### 1、基本介绍
 * 简化`Spring`应用开发的一个框架、整个`Spring`技术栈的一个大整合；
@@ -284,7 +285,7 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 
 ***
 
-## <font id = "2">二、配置文件 
+## 二、配置文件 
 
 ### 1 、配置文件
 
@@ -361,7 +362,7 @@ pets:
 pets: [cat,dog,pig]
 ```
 
-### 3 、配置文件值注入
+### 3 、配置文件值注入 
 `JavaBean`配置：
 ```java
 /**
