@@ -9,6 +9,10 @@
   - [5、Hello World探究](#5hello-world探究)
   - [6、使用Spring Initializer快速创建Spring Boot项目](#6使用spring-initializer快速创建spring-boot项目)
 - [二、配置文件](#二配置文件 )
+  - [1 、配置文件](1 配置文件)
+  - [2、YAML语法](2YAML语法)
+  - [3、配置文件值注入-对应springboot_02_config项目](3配置文件值注入-对应springboot_02_config项目)
+  - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](4application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目)
 
 <!-- /TOC -->
 
@@ -353,35 +357,39 @@ SpringBoot使用一个全局的配置文件，下面两者都会当做是配置�
 * `application.properties`；
 * `application.yml`；
 
-<font color = blue>配置文件的作用：修改SpringBoot自动配置的默认值，SpringBoot在底层都给我们自动配置好；
+配置文件的作用：**修改SpringBoot自动配置的默认值，SpringBoot在底层都给我们自动配置好；**
 
-<font color = red>YAML（YAML Ain't Markup Language）
+`YAML（YAML Ain't Markup Language）`
 
-	YAML A Markup Language：是一个标记语言
-	YAML isn't Markup Language：不是一个标记语言
+```xml
+YAML A Markup Language：是一个标记语言
+YAML isn't Markup Language：不是一个标记语言
+```
 
 标记语言：
 以前的配置文件，大多都使用的是` xxxx.xml`文件；
 
-<fonT color = red>YAML：以数据为中心，比json、xml等更适合做配置文件；
+`YAML`：以**数据为中心，比`json`、`xml`等更适合做配置文件**；
 
-配置例子
+`yaml`配置例子:
 
 ```yaml
 server:
   port:  8081
 ```
+对应`xml`配置例子:
+
 ```xml
 <server>
 	<port>8081</port>
 </server>
 ```
 
-### 2 、YAML语法
+### 2、YAML语法
 
 基本语法: 
-* `k:(空格)v `：表示一对键值对（<font color  = blue>空格必须有</font>）；
-* 以空格的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的；
+* `k:(空格)v `：表示一对键值对( **空格必须有**）；
+* 以**空格**的缩进来控制层级关系；**只要是左对齐的一列数据，都是同一个层级的；**
 * 属性和值也是大小写敏感；
 
 值的写法: 
@@ -390,7 +398,7 @@ server:
 
 * `k: v` ： 字面直接来写；
 
->字符串默认不用加上单引号或者双引号；
+>**字符串默认不用加上单引号或者双引号**；
 > * `""`双引号：不会转义字符串里面的特殊字符，特殊字符会作为本身想表示的意思。
 >    `name: "zhangsan \n lisi"`输出 : `zhangsan 换行 lisi`；
 > * `''`单引号：会转义特殊字符，特殊字符最终只是一个普通的字符串数据。
@@ -398,19 +406,19 @@ server:
 
 对象、`Map`（属性和值）（键值对）：
 
-`k: v`：在下一行来写对象的属性和值的关系，注意缩进
+`k: v`：在下一行来写对象的属性和值的关系，注意缩进。
 对象还是`k: v`的方式
 ```yaml
 friends:
-lastName: zhangsan
-age: 20
+	lastName: zhangsan
+	age: 20
 ```
 行内写法：
 ```yaml
 friends: {lastName: zhangsan,age: 18 }
 ```
 数组（`List`、`Set`）：
-用`- 值`表示数组中的一个元素
+用`- 值`(注意有空格)表示数组中的一个元素
 ```yaml
 pets:
  ‐ cat
@@ -422,24 +430,25 @@ pets:
 pets: [cat,dog,pig]
 ```
 
-### 3 、配置文件值注入 
+### 3、配置文件值注入-对应springboot_02_config项目 
 `JavaBean`配置：
 ```java
 /**
  * 将配置文件中配置的每一个属性的值，映射到这个组件中
- * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定；
+ * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关 的配置进行绑定；
  *      prefix = "person"：配置文件中哪个下面的所有属性进行一一映射
  * 只有这个组件是容器中的组件，才能使用容器提供的@ConfigurationProperties功能；
- *  @ConfigurationProperties(prefix = "person")默认从 全局配置文件 中获取值；
- *
+ * 所以需要使用@Component注解;
+ *  @ConfigurationProperties(prefix = "person")默认从全局配置文件中获取值(也可以指定文件)；
  */
-@Component
+@Component("myPerson")
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
     private String lastName;
     private Integer age;
     private Boolean boss;
+
     private Date birth;
     private Map<String,Object> maps;
     private List<Object> lists;
@@ -452,15 +461,53 @@ server:
   port: 8081
 
 person:
-  lastName: hello
+  lastName: zhangsan
   age: 18
   boss: false
-  birth: 2000/10/10
-  maps: {k1: v1, k2: 12}
+  birth: 2018/01/02
+  maps: {k1 : v1, k2 : 100}
   lists:
-    - zhangsan
     - lisi
+    - wangwu
   dog:
-    name: 旺财
-    age: 12
+    name: 小狗
+    age: 5
 ```
+
+可以导入配置文件处理器，以后编写配置就有提示了。
+
+```xml
+<!--导入配置文件处理器，配置文件进行绑定就会有提示-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-configuration-processor</artifactId>
+    <optional>true</optional>
+</dependency>
+```
+
+### 4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目
+
+上面的`application.yml`配置文件也可以使用`application.properties`文件来替换: 
+
+```properties
+server.port=8081
+
+# 乱码问题
+spring.http.encoding.force=true
+spring.http.encoding.charset=UTF-8
+spring.http.encoding.enabled=true
+server.tomcat.uri-encoding=UTF-8
+
+# 配置person的值
+person.last-name=zhangsan
+person.age=18
+person.birth=2018/01/02
+person.boss=false
+person.maps.k1=v1
+person.maps.k2=100
+person.lists=lisi,wangwu
+person.dog.name=小狗
+person.dog.age=5
+```
+
+### 
