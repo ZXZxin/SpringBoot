@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring: #指定使用哪个环境
+  profiles:
+    active: prod
+
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+
+---
+
+server:
+  port: 8082
+spring:
+  profiles: prod

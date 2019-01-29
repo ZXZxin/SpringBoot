@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/springboot_02_config/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_02_config_3_propertysource_importresource/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_02_config_4_profile/pom.xml" />
       </list>
     </option>
   </component>

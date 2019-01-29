@@ -6,5 +6,6 @@
     <file url="file://$PROJECT_DIR$/springboot_02_config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_02_config_2_propertiesonfig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_02_config_3_propertysource_importresource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_02_config_4_profile" charset="UTF-8" />
   </component>
 </project>

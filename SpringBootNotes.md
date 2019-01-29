@@ -15,6 +15,8 @@
   - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](#4applicationyml对应的applicationproperties配置-springboot_02_config_2_propertiesonfig项目)
   - [5、@Value获取值和@ConfigurationProperties获取值比较](#5value获取值和configurationproperties获取值比较)
   - [6、@PropertySource&@ImportResource&@Bean](#6propertySourceimportresourcebean)
+  - [7、配置文件占位符](7配置文件占位符)
+  - [8、Profile切换环境](8profile切换环境)
 
 <!-- /TOC -->
 
@@ -146,7 +148,7 @@ public class HelloController {
 
 ### 5、Hello World探究
 
-#### `Pom.xml`文件
+#### (1)、Pom.xml文件
 
 父项目
 
@@ -190,7 +192,7 @@ public class HelloController {
 
 `Spring Boot`将所有的功能场景都抽取出来，做成一个个的`starters`（启动器），只需要在项目里面引入这些`starter`相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器。
 
-#### 主程序类，主入口类 
+#### (2)、主程序类，主入口类 
 
 
 ```java
@@ -533,6 +535,8 @@ person.dog.age=5
 
 ### 6、@PropertySource&@ImportResource&@Bean
 
+>  对应项目: `springboot_02_config_3_propertysource_importresource`
+
 `@PropertySource`：加载指定的配置文件。
 
 ```java
@@ -625,4 +629,128 @@ public class SpringBoot02Config3PropertySourceImportResourceApplicationTests {
 	}
 }
 ```
+
+### 7、配置文件占位符
+
+> 没有专门写一个项目。
+
+1、这些表达式可以出现在配置文件中: 
+
+例如`application.properties`
+
+```java
+${random.value}、${random.int}、${random.long}
+${random.int(10)}、${random.int[1024,65536]}
+```
+
+2、占位符获取之前配置的值，如果没有可以是用:指定默认值
+
+比如: 
+
+```properties
+person.last-name=张三${random.uuid}
+person.age=${random.int} # 生成随机数
+person.birth=2017/12/15
+person.boss=false
+person.maps.k1=v1
+person.maps.k2=14
+person.lists=a,b,c
+person.dog.name=${person.hello:hello}_dog #如果没有定义person.hello，就使用默认的hello
+person.dog.age=15
+```
+
+### 8、Profile切换环境
+
+#### (1)、多Profile文件
+
+我们在主配置文件编写的时候，文件名可以是   `application-{profile}.properties/yml`
+
+默认使用`application.properties`的配置；
+
+#### (2)、yml支持多文档块方式
+
+```yaml
+server:
+  port: 8080
+spring: #指定使用哪个环境
+  profiles:
+    active: prod
+
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+
+---
+
+server:
+  port: 8082
+spring:
+  profiles: prod
+```
+
+
+
+#### (3)、激活指定profile
+
+​	1、在配置文件中指定  `spring.profiles.active=dev`
+
+​	例如项目中有三个`properties`文件，分别是`application.properties、application-dev.properties、application-prod.properties`：
+
+![](images/sb13_profile2.png)
+
+内容如下: 
+
+`application.properties`:
+
+```properties
+# 默认环境的配置文件
+
+server.port=80
+
+# 默认用的就是 application.properties, 但是也可以通过下面的方法来指定别的(对于properties,对于yml是别的方式)
+
+# 使用第二个（生产环境的）
+spring.profiles.active=prod
+```
+
+`application-dev.properties`: 
+
+```properties
+# 开发环境的配置文件
+
+server.port=8081
+```
+
+`application-prod.properties`:
+
+```properties
+# 生产环境的配置文件
+
+server.port=8082
+```
+
+因为在`application.properties`中配置了使用`prod`环境，所以最终项目在`8082`端口启动了。
+
+​	2、IDEA中配置命令行参数`--spring.profiles.active=dev`
+
+![命令行Profile](images/sb12_profile1.png)
+
+```c
+o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 
+```
+
+最终下面显示还是在`dev`这个环境中启动，所以说命令行参数的优先级`>`配置文件的优先级
+
+​	３、命令行：`java -jar springboot_02_config_4_profile-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev`
+
+​	 可以直接在测试的时候，配置传入命令行参数
+
+![](images/sb14_profile3.png)
+
+​	4、虚拟机参数: `-Dspring.profiles.active=dev`
+
+![](images/sb15_profile4.png)
 
