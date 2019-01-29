@@ -12,7 +12,7 @@
   - [1、配置文件](#1配置文件)
   - [2、YAML语法](#2YAML语法)
   - [3、配置文件值注入-对应springboot_02_config项目](#3配置文件值注入-对应springboot_02_config项目)
-  - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](#4application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目)
+  - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](#4applicationyml对应的applicationproperties配置-springboot_02_config_2_propertiesonfig项目)
 
 <!-- /TOC -->
 
