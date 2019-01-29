@@ -267,14 +267,23 @@ public @interface EnableAutoConfiguration {
     也就是: 将主配置类（`@SpringBootApplication`标注的类）的**所在包及下面所有子包里面的所有组件扫描到Spring容器；，所以如果上面的`controller `如果不是在主配置类所在的包(或者子包)下，就不能扫描到。**
 
   ![](images/sb4_import.png)
+
 * `@Import(EnableAutoConfigurationImportSelector.class)`: 给容器中导入组件(不在同一个包下面的)`EnableAutoConfigurationImportSelector`：导入哪些组件的选择器；将所有需要导入的组件以全类名的方式返回，这些组件就会被添加到容器中；会给容器中导入非常多的自动配置类（`xxxAutoConfiguration`）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件；
     ![在这里插入图片描述](images/sb5_autoconfig.png)
+
+    
+
     有了自动配置类，免去了我们手动编写配置注入功能组件等的工作；
     里面的`getCandidateConfigurations`调用了下面的一个方法: 
     `SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader)`
     Spring Boot在启动的时候从类路径下的`META-INF/spring.factories`中获取`EnableAutoConfiguration`指定的值，将这些值作为自动配置类导入到容器中，自动配置类就生效，帮我们进行自动配置工作；以前我们需要自己配置的东西，自动配置类都帮我们；
 
+    
+
     ![在这里插入图片描述](images/sb6_spring_factories.png)
+
+    
+
     J2EE的整体整合解决方案和自动配置都在`spring-boot-autoconfigure-xxx.RELEASE.jar`；
     ![在这里插入图片描述](images/sb7_auto_component.png)
 
