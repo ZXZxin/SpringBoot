@@ -13,8 +13,8 @@
   - [2、YAML语法](#2YAML语法)
   - [3、配置文件值注入-对应springboot_02_config项目](#3配置文件值注入-对应springboot_02_config项目)
   - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](#4applicationyml对应的applicationproperties配置-springboot_02_config_2_propertiesonfig项目)
-  - [5、@Value获取值和@ConfigurationProperties获取值比较](#5@value获取值和@configurationproperties获取值比较)
-  - [6、@PropertySource&@ImportResource&@Bean](#6@propertySource&@importresource&@bean)
+  - [5、@Value获取值和@ConfigurationProperties获取值比较](#5value获取值和configurationproperties获取值比较)
+  - [6、@PropertySource&@ImportResource&@Bean](#6propertySourceimportresourcebean)
 
 <!-- /TOC -->
 
