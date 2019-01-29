@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b50ef4a6-9f6f-41f0-a3c8-7c11e24ea0d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/main/java/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/test/java/com/zxin/springboot/bean/Dog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/test/java/com/zxin/springboot/bean/Person.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot_02_config/target/classes/application.properties" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/springboot_02_config/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/springboot_02_config/src/main/java/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringBootNotes.md" afterPath="$PROJECT_DIR$/SpringBootNotes.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_02_config/src/test/java/com/zxin/springboot/SpringBoot02ConfigApplicationTests.java" afterPath="$PROJECT_DIR$/springboot_02_config/src/test/java/com/zxin/springboot/SpringBoot02ConfigApplicationTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,42 +28,6 @@
                 <element signature="e#627#628#0" expanded="true" />
                 <element signature="e#672#673#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_02_config/src/main/java/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="22">
-                <caret line="1" column="50" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-                <folding>
-                  <marker date="1548745308299" expanded="true" signature="76:374" ph="/**...*/" />
-                  <marker date="1548745308299" expanded="true" signature="375:441" ph="@{...}" />
-                  <marker date="1548745308299" expanded="true" signature="691:711" ph="server: &lt;1 key&gt;" />
-                  <marker date="1548745308299" expanded="true" signature="707:711" ph="8081" />
-                  <marker date="1548745308299" expanded="true" signature="713:877" ph="person: &lt;7 keys&gt;" />
-                  <marker date="1548745308299" expanded="true" signature="733:741" ph="zhangsan" />
-                  <marker date="1548745308299" expanded="true" signature="749:751" ph="18" />
-                  <marker date="1548745308299" expanded="true" signature="760:765" ph="false" />
-                  <marker date="1548745308299" expanded="true" signature="775:785" ph="2018/01/02" />
-                  <marker date="1548745308299" expanded="true" signature="788:813" ph="maps: {2 keys}" />
-                  <marker date="1548745308299" expanded="true" signature="800:802" ph="v1" />
-                  <marker date="1548745308299" expanded="true" signature="809:812" ph="100" />
-                  <marker date="1548745308299" expanded="true" signature="816:846" ph="lists: &lt;2 items&gt;" />
-                  <marker date="1548745308299" expanded="true" signature="829:833" ph="lisi" />
-                  <marker date="1548745308299" expanded="true" signature="840:846" ph="wangwu" />
-                  <marker date="1548745308299" expanded="true" signature="849:877" ph="dog: &lt;2 keys&gt;" />
-                  <marker date="1548745308299" expanded="true" signature="864:866" ph="小狗" />
-                  <marker date="1548745308299" expanded="true" signature="905:964" ph="/**...*/" />
-                  <marker date="1548745308299" expanded="true" signature="965:1009" ph="@{...}" />
-                  <marker date="1548745308299" expanded="true" signature="1062:1096" ph="@{...}" />
-                  <marker date="1548745308299" expanded="true" signature="1156:1161" ph=" { " />
-                  <marker date="1548745308299" expanded="true" signature="1200:1203" ph=" }" />
-                </folding>
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -109,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/main/java/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -118,6 +71,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,7 +162,6 @@
         <option value="$PROJECT_DIR$/springboot_01_helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/springboot_02_config/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/springboot_02_config/src/test/java/com/zxin/springboot/Springboot02ConfigApplicationTests.java" />
         <option value="$PROJECT_DIR$/springboot_02_config/src/main/java/com/zxin/springboot/bean/Person.java" />
         <option value="$PROJECT_DIR$/springboot_02_config/src/main/java/com/zxin/springboot/Springboot02ConfigApplication.java" />
@@ -212,6 +174,7 @@
         <option value="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/test/java/com/zxin/springboot/SpringBoot02Config2PropertiesonfigApplicationTests.java" />
         <option value="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/main/java/readme.md" />
+        <option value="$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -318,6 +281,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
@@ -657,7 +628,7 @@
       <workItem from="1548578941785" duration="4903000" />
       <workItem from="1548660108840" duration="9309000" />
       <workItem from="1548736924129" duration="1367000" />
-      <workItem from="1548742487374" duration="3534000" />
+      <workItem from="1548742487374" duration="3985000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1548580697647</created>
@@ -690,10 +661,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19113000" />
+    <option name="totallyTimeSpent" value="19564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2084" y="40" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -709,7 +681,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1100,14 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot_02_config/src/main/java/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1226,6 +1190,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_02_config/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -9,9 +9,9 @@
   - [5、Hello World探究](#5hello-world探究)
   - [6、使用Spring Initializer快速创建Spring Boot项目](#6使用spring-initializer快速创建spring-boot项目)
 - [二、配置文件](#二配置文件 )
-  - [1 、配置文件](#1配置文件)
+  - [1、配置文件](#1配置文件)
   - [2、YAML语法](#2YAML语法)
-  - [3、配置文件值注入-对应springboot_02_config项目](#3配置文件值注入对应springboot02config项目)
+  - [3、配置文件值注入-对应springboot_02_config项目](#3配置文件值注入-对应springboot_02_config项目)
   - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](#4application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目)
 
 <!-- /TOC -->
@@ -351,7 +351,7 @@ public class HelloController {
 
 ## 二、配置文件 
 
-### 1 、配置文件
+### 1、配置文件
 
 SpringBoot使用一个全局的配置文件，下面两者都会当做是配置文件，配置文件名是固定的；
 * `application.properties`；
@@ -410,9 +410,12 @@ server:
 对象还是`k: v`的方式
 ```yaml
 friends:
-	lastName: zhangsan
-	age: 20
+  lastName: zhangsan
+  age: 20
 ```
+
+
+
 行内写法：
 ```yaml
 friends: {lastName: zhangsan,age: 18 }
