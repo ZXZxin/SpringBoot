@@ -15,8 +15,8 @@
   - [4、application.yml对应的application.properties配置-springboot_02_config_2_propertiesonfig项目](#4applicationyml对应的applicationproperties配置-springboot_02_config_2_propertiesonfig项目)
   - [5、@Value获取值和@ConfigurationProperties获取值比较](#5value获取值和configurationproperties获取值比较)
   - [6、@PropertySource&@ImportResource&@Bean](#6propertySourceimportresourcebean)
-  - [7、配置文件占位符](7配置文件占位符)
-  - [8、Profile切换环境](8profile切换环境)
+  - [7、配置文件占位符](#7配置文件占位符)
+  - [8、Profile切换环境](#8profile切换环境)
 
 <!-- /TOC -->
 
