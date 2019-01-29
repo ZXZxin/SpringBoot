@@ -661,6 +661,8 @@ person.dog.age=15
 
 ### 8、Profile切换环境
 
+> springboot_02_config_4_profile项目。
+
 #### (1)、多Profile文件
 
 我们在主配置文件编写的时候，文件名可以是   `application-{profile}.properties/yml`
@@ -691,7 +693,7 @@ spring:
   profiles: prod
 ```
 
-
+这种方式也是和`properties`配置文件的指定方式差不多。
 
 #### (3)、激活指定profile
 
