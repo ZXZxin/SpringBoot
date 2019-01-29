@@ -9,6 +9,7 @@
         <module name="springboot_01_helloworld" />
         <module name="springboot_02_config" />
         <module name="springboot_02_config_2_propertiesonfig" />
+        <module name="springboot_02_config_3_propertysource_importresource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="springboot_01_helloworld" target="1.7" />
       <module name="springboot_02_config" target="1.8" />
       <module name="springboot_02_config_2_propertiesonfig" target="1.8" />
+      <module name="springboot_02_config_3_propertysource_importresource" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
