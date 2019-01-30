@@ -17,6 +17,7 @@
   - [6、@PropertySource&@ImportResource&@Bean](#6propertySourceimportresourcebean)
   - [7、配置文件占位符](#7配置文件占位符)
   - [8、Profile切换环境](#8profile切换环境)
+  - [9、配置文件位置](#9配置文件位置)
 
 <!-- /TOC -->
 
@@ -755,4 +756,81 @@ o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081
 ​	4、虚拟机参数: `-Dspring.profiles.active=dev`
 
 ![](images/sb15_profile4.png)
+
+### 9、配置文件位置
+
+
+
+SpringBoot 启动会扫描以下位置的`application.properties`或者`application.yml`文件作为Spring boot的默认配置文件
+
+```c
+–file:./config/
+–file:./
+–classpath:/config/
+–classpath:/
+```
+
+**优先级由高到底，高优先级的配置会覆盖低优先级的配置；**
+
+SpringBoot会从这四个位置全部加载主配置文件；**互补配置**；
+
+例如：
+
+![](images/sb16_location1.png)
+
+这里使用`–classpath:/config/`和`–classpath:/`下的两个`application.properties`来测试一下:
+
+![](images/sb17_location2.png)
+
+
+
+相关代码:
+
+`classpath:/config/application.properties`：
+
+```properties
+server.port=8082
+```
+
+`classpath:/application.properties`:
+
+```properties
+server.port=8081
+
+# 配置项目的访问路径
+server.servlet.context-path=/springboot_02_config_5_locationofproperties
+```
+
+`TestController`:
+
+```java
+package com.zxin.springboot.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
+}
+
+```
+
+
+
+我们还可以通过`spring.config.location`来改变默认的配置文件位置；
+
+**项目打包好以后，我们可以使用命令行参数的形式，启动项目的时候来指定配置文件的新位置；指定配置文件和默认加载的这些配置文件共同起作用形成互补配置；**
+
+`java -jar springboot_02_config_5_locationofproperties-0.0.1-SNAPSHOT.jar --spring.config.location=/home/zxzxin/IDEA/application.properties`
+
+![](images/sb18_location3.png)
+
+
+
+### 
 

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/springboot_02_config_2_propertiesonfig.iml" filepath="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/springboot_02_config_2_propertiesonfig.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_02_config_3_propertysource_importresource/springboot_02_config_3_propertysource_importresource.iml" filepath="$PROJECT_DIR$/springboot_02_config_3_propertysource_importresource/springboot_02_config_3_propertysource_importresource.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_02_config_4_profile/springboot_02_config_4_profile.iml" filepath="$PROJECT_DIR$/springboot_02_config_4_profile/springboot_02_config_4_profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/springboot_02_config_5_locationofproperties.iml" filepath="$PROJECT_DIR$/springboot_02_config_5_locationofproperties/springboot_02_config_5_locationofproperties.iml" />
     </modules>
   </component>
 </project>

@@ -11,6 +11,7 @@
         <module name="springboot_02_config_2_propertiesonfig" />
         <module name="springboot_02_config_3_propertysource_importresource" />
         <module name="springboot_02_config_4_profile" />
+        <module name="springboot_02_config_5_locationofproperties" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="springboot_02_config_2_propertiesonfig" target="1.8" />
       <module name="springboot_02_config_3_propertysource_importresource" target="1.8" />
       <module name="springboot_02_config_4_profile" target="1.8" />
+      <module name="springboot_02_config_5_locationofproperties" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
