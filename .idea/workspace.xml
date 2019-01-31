@@ -18,7 +18,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/resources/config/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,10 +143,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2114" />
-    <option name="y" value="129" />
-    <option name="width" value="1618" />
-    <option name="height" value="951" />
+    <option name="x" value="2201" />
+    <option name="y" value="363" />
+    <option name="width" value="782" />
+    <option name="height" value="997" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -145,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,13 +173,96 @@
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_02_config_5_locationofproperties" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,12 +569,12 @@
       <item index="3" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config2PropertiesonfigApplication" />
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config3PropertysourceImportresourceApplication" />
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config4ProfileApplication" />
-      <item index="6" class="java.lang.String" itemvalue="Application.HelloWorldMainApplication (1)" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.SpringBoot02ConfigApplicationTests.contextLoads" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config2PropertiesonfigApplicationTests.contextLoads" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.contextLoads" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.testIsContainHelloService" />
-      <item index="11" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config5LocationofpropertiesApplication" />
+      <item index="6" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config5LocationofpropertiesApplication" />
+      <item index="7" class="java.lang.String" itemvalue="Application.HelloWorldMainApplication (1)" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.SpringBoot02ConfigApplicationTests.contextLoads" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config2PropertiesonfigApplicationTests.contextLoads" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.contextLoads" />
+      <item index="11" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.testIsContainHelloService" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -498,6 +601,7 @@
       <workItem from="1548736924129" duration="1367000" />
       <workItem from="1548742487374" duration="11706000" />
       <workItem from="1548856467863" duration="3461000" />
+      <workItem from="1548898767381" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1548580697647</created>
@@ -542,27 +646,26 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30746000" />
+    <option name="totallyTimeSpent" value="32338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837406" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3092455" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07395833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.353125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4314559" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4314559" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -575,6 +678,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837406" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -642,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="27" column="21" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,10 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#305#306#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,11 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#363#364#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,11 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#355#356#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +1010,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="154">
             <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -938,23 +1019,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application.properties" />
     <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/SpringBoot02Config5LocationOfPropertiesApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,27 +1052,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/application.properties" />
     <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/SpringBoot02Config5LocationOfPropertiesApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/config/application.properties">
+    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/config/application.properties" />
+    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="88">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1014,20 +1078,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-          </folding>
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
