@@ -21,6 +21,9 @@
   - [10、外部配置加载顺序](#10外部配置加载顺序)
   - [11、自动配置原理-重点](#11自动配置原理-重点)
 - [三、日志](#三日志)
+  - [1、日志框架](#1日志框架)
+  - [2、SLF4j使用](#2slf4j使用)
+  - [3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem](3springboot和其他框架整合时日志的统一管理问题-legacyproblem)
 
 <!-- /TOC -->
 
@@ -1190,4 +1193,44 @@ Negative matches:（没有启动，没有匹配成功的自动配置类）
 SpringBoot：底层是Spring框架，Spring框架默认是用JCL；**SpringBoot选用 SLF4j和logback；**
 
 #### 2、SLF4j使用
+
+**如何在系统中使用SLF4j   https://www.slf4j.org**
+
+以后开发的时候，日志记录方法的调用，不应该来直接调用日志的实现类，而是调用日志抽象层里面的方法；
+
+给系统里面导入`slf4j`的`jar`和 ` logback`的实现`jar`
+
+```java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class HelloWorld {
+  public static void main(String[] args) {
+    Logger logger = LoggerFactory.getLogger(HelloWorld.class);
+    logger.info("Hello World");
+  }
+}
+```
+
+图示；
+
+![](images/sb23_auto4.png)
+
+每一个日志的实现框架都有自己的配置文件。使用`slf4j`以后，**配置文件还是做成日志实现框架自己本身的配置文件；**
+
+#### 3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem
+
+SpringBoot（slf4j+logback）、Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx
+
+统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出？
+
+![](images/sb24_legacy.png)
+
+**如何让系统中所有的日志都统一到`slf4j`；**
+
+1、将系统中其他日志框架先排除出去；
+
+2、用中间包来替换原有的日志框架；
+
+3、我们导入`slf4j`其他的实现
 
