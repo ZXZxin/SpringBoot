@@ -13,6 +13,7 @@
         <module name="springboot_02_config_4_profile" />
         <module name="springboot_02_config_5_locationofproperties" />
         <module name="springboot_02_config_6_autoconfig" />
+        <module name="springboot_03_logging" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
       <module name="springboot_02_config_4_profile" target="1.8" />
       <module name="springboot_02_config_5_locationofproperties" target="1.8" />
       <module name="springboot_02_config_6_autoconfig" target="1.8" />
+      <module name="springboot_03_logging" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

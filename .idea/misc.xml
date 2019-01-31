@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/springboot_02_config_4_profile/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_02_config_5_locationofproperties/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_02_config_6_autoconfig/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_03_logging/pom.xml" />
       </list>
     </option>
   </component>

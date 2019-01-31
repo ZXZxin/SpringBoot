@@ -23,7 +23,7 @@
 - [三、日志](#三日志)
   - [1、日志框架](#1日志框架)
   - [2、SLF4j使用](#2slf4j使用)
-  - [3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem](3springboot和其他框架整合时日志的统一管理问题-legacyproblem)
+  - [3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem](#3springboot和其他框架整合时日志的统一管理问题-legacyproblem)
 
 <!-- /TOC -->
 
