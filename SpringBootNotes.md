@@ -1234,3 +1234,34 @@ SpringBoot（slf4j+logback）、Spring（commons-logging）、Hibernate（jboss-
 
 3、我们导入`slf4j`其他的实现
 
+#### 4、SpringBoot日志关系
+
+首先依赖于`spring-boot-starter`
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+</dependency>
+```
+
+其中`spring-boot-starter`又包含`spring-boot-starter-logging`，使用它来做日志功能；
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-logging</artifactId>
+</dependency>
+```
+
+底层依赖关系: 
+
+![](images/sb25_log1.png)
+
+总结：
+
+​	1）、SpringBoot底层也是使用`slf4j+logback`的方式进行日志记录；
+
+​	2）、SpringBoot也把其他的日志都替换成了`slf4j`；
+
+​	3）、中间替换包：`jcl-over-slf4j.jar、log4j-over-slf4j.jar、jul-to-slf4j.jawr`等；
