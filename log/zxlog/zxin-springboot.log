@@ -1,0 +1,10 @@
+2019-01-31 16:09:12.860 [ main ] - [ INFO  ] [ com.zxin.springboot.SpringBoot03LoggingApplication : 50 ] - Starting SpringBoot03LoggingApplication on zxzxin with PID 11298 (/home/zxzxin/IDEA/SpringBoot/springboot_03_logging/target/classes started by zxzxin in /home/zxzxin/IDEA/SpringBoot)
+2019-01-31 16:09:12.867 [ main ] - [ DEBUG ] [ com.zxin.springboot.SpringBoot03LoggingApplication : 53 ] - Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019-01-31 16:09:12.868 [ main ] - [ INFO  ] [ com.zxin.springboot.SpringBoot03LoggingApplication : 675 ] - No active profile set, falling back to default profiles: default
+2019-01-31 16:09:14.609 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-31 16:09:14.617 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2019-01-31 16:09:14.618 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-31 16:09:14.623 [ main ] - [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/opt/idea/bin::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-01-31 16:09:14.683 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2019-01-31 16:09:15.096 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2019-01-31 16:09:15.111 [ main ] - [ INFO  ] [ com.zxin.springboot.SpringBoot03LoggingApplication : 59 ] - Started SpringBoot03LoggingApplication in 3.007 seconds (JVM running for 3.67)
