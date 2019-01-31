@@ -24,6 +24,10 @@
   - [1、日志框架](#1日志框架)
   - [2、SLF4j使用](#2slf4j使用)
   - [3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem](#3springboot和其他框架整合时日志的统一管理问题-legacyproblem)
+  - [4、SpringBoot日志关系](#4springboot日志关系)
+  - [5、日志使用](#5日志使用)
+  - [6、日志框架切换](#6日志框架切换)
+- [四、Web开发](#四web开发)
 
 <!-- /TOC -->
 
@@ -1471,7 +1475,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 		表示当前logger的appender-ref和rootLogger的appender-ref都有效
     -->
     <!-- hibernate logger -->
-    <logger name="com.atguigu" level="debug" />
+    <logger name="com.zxin" level="debug" />
     <!-- Spring framework logger -->
     <logger name="org.springframework" level="debug" additivity="false"></logger>
 
@@ -1493,3 +1497,74 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 如果使用`logback.xml`作为日志配置文件，还要使用`profile`功能，会有以下错误: 
 
 ![](images/sb31_log7.png)
+
+#### 6、日志框架切换
+
+可以按照slf4j的日志适配图，进行相关的切换；
+
+`slf4j+log4j`的方式；
+
+在`sjf4j`中使用`log4j`(而不是`logback`): 
+
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <exclusions>
+    <exclusion>
+      <artifactId>logback-classic</artifactId>
+      <groupId>ch.qos.logback</groupId>
+    </exclusion>
+    <exclusion>
+      <artifactId>log4j-over-slf4j</artifactId>
+      <groupId>org.slf4j</groupId>
+    </exclusion>
+  </exclusions>
+</dependency>
+
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-log4j12</artifactId>
+</dependency>
+```
+
+切换为`log4j2`(可能用到)
+
+> `springboot_03_logging_2_uselog4j2`项目。
+
+`pom.xml`改动:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <exclusions> <!--排除默认的logging-->
+            <exclusion>
+                <artifactId>spring-boot-starter-logging</artifactId>
+                <groupId>org.springframework.boot</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
+    <!--导入log4j2-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+
+    <!--测试-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+```
+效果:
+
+![](images/sb32_log8.png)
+
+***
+
+## 四、Web开发
