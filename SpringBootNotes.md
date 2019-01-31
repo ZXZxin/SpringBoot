@@ -20,6 +20,7 @@
   - [9、配置文件位置](#9配置文件位置)
   - [10、外部配置加载顺序](#10外部配置加载顺序)
   - [11、自动配置原理-重点](#11自动配置原理-重点)
+- [三、日志](#三日志)
 
 <!-- /TOC -->
 
@@ -351,8 +352,6 @@ public class HelloController {
 }
 
 ```
-
-
 
 ***
 
@@ -1147,4 +1146,48 @@ Negative matches:（没有启动，没有匹配成功的自动配置类）
         
 ```
 
+***
+
+### 三、日志
+
+#### 1、日志框架
+
+一个小故事: 
+
+>  小张；开发一个大型系统；
+>
+> ​	1、System.out.println("")；将关键数据打印在控制台；去掉？写在一个文件？
+>
+> ​	2、框架来记录系统的一些运行时信息；日志框架 ；  zhanglogging.jar；
+>
+> ​	3、高大上的几个功能？异步模式？自动归档？xxxx？  zhanglogging-good.jar？
+>
+> ​	4、将以前框架卸下来？换上新的框架，重新修改之前相关的API；zhanglogging-prefect.jar；
+>
+> ​	5、JDBC---数据库驱动；
+>
+> ​		写了一个统一的接口层；日志门面（日志的一个抽象层）；logging-abstract.jar；
+>
+> ​		给项目中导入具体的日志实现就行了；我们之前的日志框架都是实现的抽象层；
+
+
+
+**市面上的日志框架 : **
+
+`JUL、JCL、Jboss-logging、logback、log4j、log4j2、slf4j....`
+
+| 日志门面  （日志的抽象层）                                   | 日志实现                                             |
+| ------------------------------------------------------------ | ---------------------------------------------------- |
+| ~~JCL（Jakarta  Commons Logging）~~    **SLF4j（Simple  Logging Facade for Java）**    ~~jboss-logging~~ | Log4j  JUL（java.util.logging）  Log4j2  **Logback** |
+
+**左边选一个门面（抽象层）、右边来选一个实现；**
+
+我们最终选用的是: 
+
+* 日志门面：  SLF4J；
+* 日志实现：Logback；
+
+SpringBoot：底层是Spring框架，Spring框架默认是用JCL；**SpringBoot选用 SLF4j和logback；**
+
+#### 2、SLF4j使用
 
