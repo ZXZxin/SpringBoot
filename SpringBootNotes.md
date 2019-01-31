@@ -907,7 +907,7 @@ java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087  --serv
     从properties中获取到EnableAutoConfiguration.class类（类名）对应的值，然后把他们添加在容器中
     ```
 
-  - **将 类路径下 ` META-INF/spring.factories `里面配置的所有`EnableAutoConfiguration`的值加入到了容器中；**以下是`spring.factories`的内容。
+  - **将 类路径下 ` META-INF/spring.factories `里面配置的所有`EnableAutoConfiguration`的值加入到了容器中**；以下是`spring.factories`的内容。
 
 
 ```properties
@@ -1073,7 +1073,7 @@ public class HttpEncodingProperties {
 
 ![](images/sb22_auto3.png)
 
-**精髓：**
+**SpringBoot精髓：**
 
 ​	1）、SpringBoot启动会加载大量的自动配置类
 
@@ -1093,7 +1093,7 @@ public class HttpEncodingProperties {
 
 #### (2)、细节-@Conditional派生注解（Spring注解版原生的@Conditional作用）
 
-作用：必须是@Conditional指定的条件成立，才给容器中添加组件，配置配里面的所有内容才生效；
+作用：必须是`@Conditional`指定的条件成立，才给容器中添加组件，配置配里面的所有内容才生效；
 
 | @Conditional扩展注解            | 作用（判断是否满足当前指定条件）                 |
 | ------------------------------- | ------------------------------------------------ |
