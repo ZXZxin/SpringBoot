@@ -32,8 +32,8 @@
   - [1、简介](#1简介)
   - [2、SpringBoot对静态资源的映射规则](#2springboot对静态资源的映射规则)
   - [3、模板引擎thymeleaf](#3模板引擎thymeleaf)
-  - [4、SpringMVC自动配置](4springmvc自动配置)
-  - [5、如何修改SpringBoot的默认配置](5如何修改springboot的默认配置)
+  - [4、SpringMVC自动配置](#4springmvc自动配置)
+  - [5、如何修改SpringBoot的默认配置](#5如何修改springboot的默认配置)
 
 <!-- /TOC -->
 
@@ -2236,6 +2236,6 @@ public class WebMvcAutoConfiguration {
 
 ​	1）、SpringBoot在自动配置很多组件的时候，先看容器中有没有用户自己配置的（`@Bean、@Component`）如果有就用用户配置的，如果没有，才自动配置；如果有些组件可以有多个（`ViewResolver`）将用户配置的和自己默认的组合起来；
 
-​	2）、在SpringBoot中会有非常多的`xxxConfigurer`帮助我们进行扩展配置
+​	2）、在SpringBoot中会有非常多的`xxxConfigurer`帮助我们进行扩展配置；
 
-​	3）、在SpringBoot中会有很多的xxxCustomizer帮助我们进行定制配置
+​	3）、在SpringBoot中会有很多的`xxxCustomizer`帮助我们进行定制配置；
