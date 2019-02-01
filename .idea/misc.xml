@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/springboot_03_logging/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_primary/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/pom.xml" />
       </list>
     </option>
   </component>

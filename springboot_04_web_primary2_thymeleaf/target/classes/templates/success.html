@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--suppress ALL--> <!--解决thymeleaf红线问题-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>成功!</h1>
+    <!--th:text将div里面的内容设置成-->
+    <div th:text="${hello}">这是显示欢迎信息</div>
+
+    <hr/>
+
+    <div th:text="${hello}"></div> <!--转义-->
+    <div th:utext="${hello}"></div>
+
+    <hr/>
+    <!--th:each每次遍历都会生成当前这个标签, 3个h4-->
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+    <hr/>
+    <h4>
+        <span th:each="user:${users}">[[${user}]]</span>
+    </h4>
+</body>
+</html>

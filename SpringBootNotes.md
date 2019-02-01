@@ -29,6 +29,11 @@
   - [5、日志使用](#5日志使用)
   - [6、日志框架切换](#6日志框架切换)
 - [四、Web开发](#四web开发)
+  - [1、简介](#1简介)
+  - [2、SpringBoot对静态资源的映射规则](#2springboot对静态资源的映射规则)
+  - [3、模板引擎thymeleaf](#3模板引擎thymeleaf)
+  - [4、SpringMVC自动配置](4springmvc自动配置)
+  - [5、如何修改SpringBoot的默认配置](5如何修改springboot的默认配置)
 
 <!-- /TOC -->
 
@@ -1156,9 +1161,9 @@ Negative matches:（没有启动，没有匹配成功的自动配置类）
 
 ***
 
-### 三、日志
+## 三、日志
 
-#### 1、日志框架
+### 1、日志框架
 
 一个小故事: 
 
@@ -1197,7 +1202,7 @@ Negative matches:（没有启动，没有匹配成功的自动配置类）
 
 SpringBoot：底层是Spring框架，Spring框架默认是用JCL；**SpringBoot选用 SLF4j和logback；**
 
-#### 2、SLF4j使用
+### 2、SLF4j使用
 
 **如何在系统中使用SLF4j   https://www.slf4j.org**
 
@@ -1223,7 +1228,7 @@ public class HelloWorld {
 
 每一个日志的实现框架都有自己的配置文件。使用`slf4j`以后，**配置文件还是做成日志实现框架自己本身的配置文件；**
 
-#### 3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem
+### 3、SpringBoot和其他框架整合时日志的统一管理问题-legacyProblem
 
 SpringBoot（slf4j+logback）、Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx
 
@@ -1239,7 +1244,7 @@ SpringBoot（slf4j+logback）、Spring（commons-logging）、Hibernate（jboss-
 
 3、我们导入`slf4j`其他的实现
 
-#### 4、SpringBoot日志关系
+### 4、SpringBoot日志关系
 
 首先依赖于`spring-boot-starter`
 
@@ -1314,7 +1319,7 @@ public abstract class LogFactory {
 
 **SpringBoot能自动适配所有的日志，而且底层使用`slf4j+logback`的方式记录日志，引入其他框架的时候，只需要把这个框架依赖的日志框架排除掉即可；**
 
-#### 5、日志使用
+### 5、日志使用
 
 > `springboot_03_logging`项目。
 
@@ -1570,7 +1575,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 
 ## 四、Web开发
 
-#### 1、简介
+### 1、简介
 
 使用SpringBoot:
 
@@ -1591,7 +1596,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 
 
 
-#### 2、SpringBoot对静态资源的映射规则
+### 2、SpringBoot对静态资源的映射规则
 
 和`SpringMVC`的自动配置都在`WebMVCAutoConfiguration`类中。下面是对**静态资源**的一些配置: 
 
@@ -1700,7 +1705,17 @@ public class ResourceProperties {
 
 例如，访问项目的下静态资源`http://localhost:8080/asserts/js/Chart.min.js`去静态资源文件夹里面找`Chart.min.js`:
 
+
+
 ![](images/sb39_web6.png)
+
+
+
+> 也可以在`application.properties`中定义自己的静态资源文件夹: 
+>
+> ```properties
+> spring.resources.static-locations=classpath:/zxzxin/,classpath:/test/
+> ```
 
 3）、欢迎页； 静态资源文件夹下的所有`index.html`页面，被`"/**"`映射；
 
@@ -1775,8 +1790,452 @@ public static class FaviconConfiguration implements ResourceLoaderAware {
 
 ![](images/sb41_web8.png)
 
-#### 3、模板引擎
+
+
+### 3、模板引擎thymeleaf
 
 模板引擎的作用: 将页面模板和组装的数据交给模板引擎，模板引擎将页面中的表达式解析，填充到指定的位置，生成我们想要的内容。
 
 ![](images/sb33_template-engine.png)
+
+SpringBoot推荐`Thymeleaf`，语法更简单，功能更强大。
+
+**(1)、引入thymeleaf**
+
+![](images/sb42_web9.png)
+
+![](images/sb43_web10.png)
+
+```xml
+<properties>
+    <java.version>1.8</java.version>
+    <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+    <!--布局功能的支持程序: thymeleaf3 == layout2版本-->
+    <!--                thymeleaf2 == layout1 版本-->
+    <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+</properties>
+
+<dependencies>
+    <!--导入thymeleaf-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+</dependencies>
+```
+
+但是像上面那样配置之后项目启动会出错:
+
+![](images/sb44_web11.png)
+
+原因就是不能自己覆盖那个版本，但是教程上覆盖貌似是可以。。
+
+[解决错误博客](https://blog.csdn.net/qinxian20120/article/details/80271094)
+
+所以`pom.xml`还是不能将`thymeleaf`的版本更改，直接用`springboot`默认的版本即可。
+
+测试结果: (**`classpath:/tmplates/success.html`**)
+
+![](images/sb45_web12.png)
+
+**(2)、Thymeleaf使用**
+
+默认规则: 
+
+```java
+@ConfigurationProperties(prefix = "spring.thymeleaf")
+public class ThymeleafProperties {
+
+	private static final Charset DEFAULT_ENCODING = Charset.forName("UTF-8");
+
+	private static final MimeType DEFAULT_CONTENT_TYPE = MimeType.valueOf("text/html");
+
+	public static final String DEFAULT_PREFIX = "classpath:/templates/";
+
+	public static final String DEFAULT_SUFFIX = ".html";
+  	//
+}
+```
+
+**只要我们把HTML页面放在`classpath:/templates/`，`thymeleaf`就能自动渲染；**
+
+使用：
+
+1、导入`thymeleaf`的名称空间
+
+```xml
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+```
+
+> 一个关于IDE的问题: [Thymeleaf在IDEA中的红色波浪线问题](https://blog.csdn.net/wifi74262580/article/details/82833017)
+
+2、使用`thymeleaf`语法；
+
+```html
+<!DOCTYPE html>
+<!--suppress ALL--> <!--解决thymeleaf红线问题-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>成功!</h1>
+    <!--th:text将div里面的内容设置成-->
+    <div th:text="${hello}">这是显示欢迎信息</div> <!--后面的"这是显示欢迎信息"经过模板引擎解析后不会显示出来-->
+</body>
+</html>
+```
+
+**(3)、语法规则**
+
+[**在线教程**](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
+
+1）、`th:text`；改变当前元素里面的文本内容；
+
+`th`：任意`html`属性；来替换原生属性的值
+
+![](images/sb46_web13.png)
+
+
+
+2）、表达式语法
+
+具体参见: [在线文档](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-expression-syntax)
+
+1）、获取对象的属性、调用方法；
+2）、使用内置的基本对象；
+3）、内置的一些工具对象；
+
+Simple expressions:
+
+* Variable Expressions: `${...}`
+* Selection Variable Expressions: `*{...}`
+* Message Expressions: #{...}
+* Link URL Expressions: @{...}
+* Fragment Expressions: ~{...}
+
+Literals(字面值)
+
+* Text literals: 'one text' , 'Another one!' ,…
+* Number literals: 0 , 34 , 3.0 , 12.3 ,…
+* Boolean literals: true , false
+* Null literal: null
+* Literal tokens: one , sometext , main ,…
+
+Text operations:（文本操作）
+
+* String concatenation: +
+* Literal substitutions: |The name is ${name}|
+
+Arithmetic operations:(算数运算)
+
+* Binary operators: + , - , * , / , %
+* Minus sign (unary operator): -
+
+Boolean operations:(布尔运算)
+
+* Binary operators: and , or
+* Boolean negation (unary operator): ! , not
+
+Comparisons and equality:(比较运算)
+
+* Comparators: > , < , >= , <= ( gt , lt , ge , le )
+* Equality operators: == , != ( eq , ne )
+
+Conditional operators:(条件运算)
+
+* If-then: (if) ? (then)
+* If-then-else: (if) ? (then) : (else)
+* Default: (value) ?: (defaultvalue)
+
+Special tokens:
+
+* No-Operation: 
+
+```properties
+补充：        
+    Selection Variable Expressions: *{...}：选择表达式：和${}在功能上是一样；
+    配合 th:object="${session.user}：
+    <div th:object="${session.user}">
+        <p>Name: <span th:text="*{firstName}">Sebastian</span>.</p>
+        <p>Surname: <span th:text="*{lastName}">Pepper</span>.</p>
+        <p>Nationality: <span th:text="*{nationality}">Saturn</span>.</p>
+    </div>
+
+    Message Expressions: #{...}：获取国际化内容
+    Link URL Expressions: @{...}：定义URL；
+    @{/order/process(execId=${execId},execType='FAST')}
+    Fragment Expressions: ~{...}：片段引用表达式
+    <div th:insert="~{commons :: main}">...</div>
+```
+简单使用测试: 
+
+![](images/sb47_web14.png)
+
+相关代码: 
+
+`Controller`:
+
+```java
+@Controller
+public class MyController {
+
+    @ResponseBody
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
+
+    @RequestMapping("/success")
+    public String success(Map<String, Object> map){
+        map.put("hello", "<h1>你好</<h1>");
+        map.put("users", Arrays.asList("zhangsan", "lisi", "wangwu"));
+        return "success"; //跳转到template/success.html视图
+    }
+}
+```
+
+`success.html`:
+
+```html
+<!DOCTYPE html>
+<!--suppress ALL--> <!--解决thymeleaf红线问题-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>成功!</h1>
+    <!--th:text将div里面的内容设置成-->
+    <div th:text="${hello}">这是显示欢迎信息</div>
+
+    <hr/>
+
+    <div th:text="${hello}"></div> <!--转义-->
+    <div th:utext="${hello}"></div>
+
+    <hr/>
+    <!--th:each每次遍历都会生成当前这个标签, 3个h4-->
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+    <hr/>
+    <h4>
+        <span th:each="user:${users}">[[${user}]]</span>
+    </h4>
+</body>
+</html>
+```
+
+### 4、SpringMVC自动配置
+
+#### (1)、SpringMVC Auto Configuration
+
+[**在线文档参考**](https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)，**`org.springframework.boot.autoconfigure.web`：web的所有自动场景。**
+
+Spring MVC auto-configuration，即SpringBoot自动配置好了SpringMVC，
+
+- Inclusion of `ContentNegotiatingViewResolver` and `BeanNameViewResolver` beans.
+
+  * 自动配置了`ViewResolver`（视图解析器：根据方法的返回值得到视图对象（View），视图对象决定如何渲染（转发？重定向？））  
+  *  `ContentNegotiatingViewResolver`：组合所有的视图解析器的；
+  * **如何定制：我们可以自己给容器中添加一个视图解析器；自动的将其组合进来；比如`MyViewResolver`；**
+
+- Support for serving static resources, including support for WebJars (see below).静态资源文件夹路径,webjars等；
+
+- Static `index.html` support. 静态首页访问
+
+- Custom `Favicon` support (see below). ` favicon.ico`图标；
+
+- 自动注册了 of `Converter`, `GenericConverter`, `Formatter` beans.
+
+  - `Converter`：类型转换器；  public String hello(User user)：类型转换使用`Converter`
+  - `Formatter`  格式化器(例如日期格式化(和SpringMVC息息相关))；  2017.12.17===Date；
+
+```java
+@Bean
+@ConditionalOnProperty(
+    prefix = "spring.mvc",
+    name = {"date-format"}//在配置文件中配置日期格式化规则
+)
+public Formatter<Date> dateFormatter() {
+    return new DateFormatter(this.mvcProperties.getDateFormat());//日期格式化组件
+}
+```
+
+![](images/sb48_web15.png)
+
+**自己添加的格式化器转换器，我们只需要放在容器中即可。**
+
+- Support for `HttpMessageConverters` (see below).
+
+  - `HttpMessageConverter`：SpringMVC用来转换Http请求和响应的，例如想将User以Json方法写出去`User---Json`；
+
+  - `HttpMessageConverters` 是从容器中确定；获取所有的HttpMessageConverter；
+
+    **自己给容器中添加HttpMessageConverter，只需要将自己的组件注册容器中（@Bean,@Component）**
+
+- Automatic registration of `MessageCodesResolver` (see below).定义错误代码生成规则；
+
+- Automatic use of a `ConfigurableWebBindingInitializer` bean (see below).
+
+  **我们可以配置一个ConfigurableWebBindingInitializer来替换默认的；（添加到容器）**--> 数据初始化绑定初始化`WebDataBinder；`
+
+
+If you want to keep Spring Boot MVC features, and you just want to add additional [MVC configuration](https://docs.spring.io/spring/docs/4.3.14.RELEASE/spring-framework-reference/htmlsingle#mvc) (interceptors, formatters, view controllers etc.) you can add your own `@Configuration` class of type `WebMvcConfigurerAdapter`, but **without** `@EnableWebMvc`. If you wish to provide custom instances of `RequestMappingHandlerMapping`, `RequestMappingHandlerAdapter` or `ExceptionHandlerExceptionResolver` you can declare a `WebMvcRegistrationsAdapter` instance providing such components.
+
+If you want to take complete control of Spring MVC, you can add your own `@Configuration` annotated with `@EnableWebMvc`.
+
+#### (2)、扩展SpringMVC
+
+以前的配置，视图解析`viewController`，以及拦截器(`interceptor`)。
+
+```xml
+<mvc:view-controller path="/hello" view-name="success"/>
+<mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/hello"/>
+        <bean></bean>
+    </mvc:interceptor>
+</mvc:interceptors>
+```
+
+**编写一个配置类（@Configuration），是WebMvcConfigurerAdapter类型；不能标注@EnableWebMvc**;
+
+既保留了所有的自动配置，也能用我们扩展的配置，下面是`SpringBoot1.0`以上的，但是现在过时了
+
+```java
+//使用WebMvcConfigurerAdapter可以来扩展SpringMVC的功能
+@Configuration
+public class MyMvcConfig extends WebMvcConfigurerAdapter {
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+       // super.addViewControllers(registry);
+        //浏览器发送 /zxin 请求来到 success
+        registry.addViewController("/zxin").setViewName("success");
+    }
+}
+```
+
+[相关博客解释1](https://blog.csdn.net/qq_38164123/article/details/80392904)
+
+[相关博客解释2](http://blog.51cto.com/12066352/2093750)
+
+`SpringBoot2.0`以上的替代方案: 
+
+```java
+// 以前是使用 WebMvcConfigurerAdapter扩展SpringMVC的功能
+@Configuration
+public class MyMvcConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        //浏览器发送 /zxin请求，来到 success.html页面
+        registry.addViewController("/zxin").setViewName("success");
+    }
+}
+```
+
+原理：
+
+​	1）、`WebMvcAutoConfiguration`是SpringMVC的自动配置类；
+
+​	2）、在做其他自动配置时会导入；`@Import(EnableWebMvcConfiguration.class)`
+
+```java
+    @Configuration
+	public static class EnableWebMvcConfiguration extends DelegatingWebMvcConfiguration {
+      private final WebMvcConfigurerComposite configurers = new WebMvcConfigurerComposite();
+	 //下面的代码是 DelegatingWebMvcConfiguration(父类)中的, 从容器中获取所有的WebMvcConfigurer
+      @Autowired(required = false)
+      public void setConfigurers(List<WebMvcConfigurer> configurers) {
+          if (!CollectionUtils.isEmpty(configurers)) {
+              this.configurers.addWebMvcConfigurers(configurers);
+               //一个参考实现；将所有的WebMvcConfigurer相关配置都来一起调用；  
+           	   //@Override
+               // public void addViewControllers(ViewControllerRegistry registry) {
+               //    for (WebMvcConfigurer delegate : this.delegates) {
+               //       delegate.addViewControllers(registry);
+               //   }
+              }
+          }
+	}
+```
+
+​	3）、容器中所有的`WebMvcConfigurer`都会一起起作用；
+
+​	4）、我们的配置类也会被调用；
+
+效果：SpringMVC的自动配置和我们的扩展配置都会起作用；
+
+#### (3)、全面接管SpringMVC
+
+> 这个就是当你标注了`@EnableWebMvc`注解，就可以完全的控制SpringMVC了(SpringBoot对SpringMVC不会起作用了)。
+
+SpringBoot对SpringMVC的自动配置不需要了，所有都是我们自己配置；所有的SpringMVC(`web`场景)的自动配置都失效了。
+
+**我们需要在配置类中添加@EnableWebMvc即可；**
+
+```java
+@EnableWebMvc // 全面接管SpringMVC，静态资源都不能访问了
+@Configuration
+public class MyMvcConfig implements WebMvcConfigurer {
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/zxin").setViewName("success");
+    }
+}
+```
+
+原理：
+
+为什么`@EnableWebMvc`自动配置就失效了；
+
+1）、@EnableWebMvc的核心
+
+```java
+@Import({DelegatingWebMvcConfiguration.class}) //核心
+public @interface EnableWebMvc {
+}
+
+```
+
+2）、导入的`DelegatingWebMvcConfiguration`类: 
+
+```java
+@Configuration
+public class DelegatingWebMvcConfiguration extends WebMvcConfigurationSupport {
+}
+```
+
+3）、而`WebMvcAutoConfiguration`类的开始是这样写的: 关键就在这一行`@ConditionalOnMissingBean({WebMvcConfigurationSupport.class})`
+
+```java
+@Configuration
+@ConditionalOnWebApplication(
+    type = Type.SERVLET
+)
+@ConditionalOnClass({Servlet.class, DispatcherServlet.class, WebMvcConfigurer.class})
+//容器中没有这个组件的时候，这个自动配置类才生效，但是如果上面有了，就不生效了,所以这就是原因
+@ConditionalOnMissingBean({WebMvcConfigurationSupport.class})
+@AutoConfigureOrder(-2147483638)
+@AutoConfigureAfter({DispatcherServletAutoConfiguration.class, TaskExecutionAutoConfiguration.class, ValidationAutoConfiguration.class})
+public class WebMvcAutoConfiguration {
+}
+```
+
+4）、@EnableWebMvc将`WebMvcConfigurationSupport`组件导入进来；
+
+5）、而导入的`WebMvcConfigurationSupport`只是SpringMVC**最基本**的功能；
+
+### 5、如何修改SpringBoot的默认配置
+
+模式：
+
+​	1）、SpringBoot在自动配置很多组件的时候，先看容器中有没有用户自己配置的（`@Bean、@Component`）如果有就用用户配置的，如果没有，才自动配置；如果有些组件可以有多个（`ViewResolver`）将用户配置的和自己默认的组合起来；
+
+​	2）、在SpringBoot中会有非常多的`xxxConfigurer`帮助我们进行扩展配置
+
+​	3）、在SpringBoot中会有很多的xxxCustomizer帮助我们进行定制配置
