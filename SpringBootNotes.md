@@ -1,4 +1,5 @@
 # SpringBoot 总笔记
+
 <!-- TOC -->
 
 - [一、SpringBoot入门](#一springboot入门)
@@ -1568,3 +1569,214 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 ***
 
 ## 四、Web开发
+
+#### 1、简介
+
+使用SpringBoot:
+
+**1）、创建SpringBoot应用，选中我们需要的模块；**
+
+**2）、SpringBoot已经默认将这些场景配置好了，只需要在配置文件中指定少量配置就可以运行起来；**
+
+**3）、自己编写业务代码即可；**
+
+
+
+**自动配置原理？**
+
+这个场景SpringBoot帮我们配置了什么？能不能修改？能修改哪些配置？能不能扩展？xxx
+
+* `xxxxAutoConfiguration`：帮我们给容器中自动配置组件；
+* `xxxxProperties` : 配置类来封装配置文件的内容；
+
+
+
+#### 2、SpringBoot对静态资源的映射规则
+
+和`SpringMVC`的自动配置都在`WebMVCAutoConfiguration`类中。下面是对**静态资源**的一些配置: 
+
+![](images/sb34_web1.png)
+
+具体代码如下: 
+
+```java
+        public void addResourceHandlers(ResourceHandlerRegistry registry) {
+            if (!this.resourceProperties.isAddMappings()) {
+                logger.debug("Default resource handling disabled");
+            } else {
+                Duration cachePeriod = this.resourceProperties.getCache().getPeriod();
+                CacheControl cacheControl = this.resourceProperties.getCache().getCachecontrol().toHttpCacheControl();
+                if (!registry.hasMappingForPattern("/webjars/**")) {
+                    this.customizeResourceHandlerRegistration(
+                            registry.addResourceHandler(
+                                new String[]{"/webjars/**"}).addResourceLocations(
+                                    new String[]{"classpath:/META-INF/resources/webjars/"}).setCachePeriod(
+                                        this.getSeconds(cachePeriod)).setCacheControl(cacheControl));
+                }
+                String staticPathPattern = this.mvcProperties.getStaticPathPattern();
+                if (!registry.hasMappingForPattern(staticPathPattern)) {
+                    this.customizeResourceHandlerRegistration(
+                            registry.addResourceHandler(
+                                new String[]{staticPathPattern}).addResourceLocations(
+                                    getResourceLocations(
+                                        this.resourceProperties.getStaticLocations())).setCachePeriod(
+                                    this.getSeconds(cachePeriod)).setCacheControl(cacheControl));
+                }
+            }
+        }
+```
+
+对这对代码的总结: 
+
+1）、所有` /webjars/**` ，都去` classpath:/META-INF/resources/webjars/ `找资源；
+
+`webjars`：以`jar`包的方式引入静态资源；http://www.webjars.org/
+
+![](images/sb35_web2.png)
+
+导入之后，查看`maven`依赖的目录结果，就是上面的` classpath:/META-INF/resources/webjars/ `目录: 
+
+![](images/sb36_web3.png)
+
+```xml
+<!--导入静态资源jquery-->
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>jquery</artifactId>
+    <version>3.3.1-1</version>
+</dependency>
+```
+
+启动项目之后，可以直接在浏览器访问到`jquery`: 输入`http://localhost:8080/webjars/jquery/3.3.1-1/jquery.js`
+
+![](images/sb37_web4.png)
+
+
+
+2）、`"/**"` 访问当前项目的任何资源(自己添加的静态资源)，都去（静态资源的文件夹）找映射
+
+![](images/sb38_web5.png)
+
+比如在上面的代码中还有一个行`Duration cachePeriod = this.resourceProperties.getCache().getPeriod();`
+
+这个`resourceProperties`是类`ResourceProperties`的对象，可以设置和静态资源有关的参数，比如**缓存时间**等。相关代码如下: 
+
+```java
+@ConfigurationProperties(
+    prefix = "spring.resources",
+    ignoreUnknownFields = false
+)
+public class ResourceProperties {
+
+    private static final String[] CLASSPATH_RESOURCE_LOCATIONS 
+        = new String[]{"classpath:/META-INF/resources/", 
+            "classpath:/resources/", 
+            "classpath:/static/", 
+            "classpath:/public/"};
+
+    private String[] staticLocations;
+    private boolean addMappings;
+    private final ResourceProperties.Chain chain;
+    private final ResourceProperties.Cache cache;
+
+    public ResourceProperties() {
+        this.staticLocations = CLASSPATH_RESOURCE_LOCATIONS;
+        this.addMappings = true;
+        this.chain = new ResourceProperties.Chain();
+        this.cache = new ResourceProperties.Cache();
+    }
+}
+```
+
+下面就是几个**静态资源的文件夹**
+
+```properties
+"classpath:/META-INF/resources/", 
+"classpath:/resources/",
+"classpath:/static/", 
+"classpath:/public/" 
+"/"：当前项目的根路径
+```
+
+例如，访问项目的下静态资源`http://localhost:8080/asserts/js/Chart.min.js`去静态资源文件夹里面找`Chart.min.js`:
+
+![](images/sb39_web6.png)
+
+3）、欢迎页； 静态资源文件夹下的所有`index.html`页面，被`"/**"`映射；
+
+`localhost:8080/`   找`index.html`页面
+
+```java
+    @Bean
+    public WelcomePageHandlerMapping welcomePageHandlerMapping(
+            ApplicationContext applicationContext) {
+
+        return new WelcomePageHandlerMapping(
+                new TemplateAvailabilityProviders(
+                    applicationContext), applicationContext,
+                this.getWelcomePage(), this.mvcProperties.getStaticPathPattern());
+    }
+```
+
+![](images/sb40_web7.png)
+
+4）、所有的 `**/favicon.ico`  都是在静态资源文件下找；
+
+下面是`WebMVCAutoConfiguration`里面的内部类`FaviconConfiguration`: 
+
+```java
+@Configuration
+@ConditionalOnProperty(
+    value = {"spring.mvc.favicon.enabled"},
+    matchIfMissing = true
+)
+public static class FaviconConfiguration implements ResourceLoaderAware {
+    private final ResourceProperties resourceProperties;
+    private ResourceLoader resourceLoader;
+
+    public FaviconConfiguration(ResourceProperties resourceProperties) {
+        this.resourceProperties = resourceProperties;
+    }
+
+    public void setResourceLoader(ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
+    }
+
+    @Bean
+    public SimpleUrlHandlerMapping faviconHandlerMapping() {
+        SimpleUrlHandlerMapping mapping = new SimpleUrlHandlerMapping();
+        mapping.setOrder(-2147483647);
+        // 所有的**/favicon.ico,还是在静态资源文件夹
+        mapping.setUrlMap(Collections.singletonMap("**/favicon.ico", this.faviconRequestHandler()));
+        return mapping;
+    }
+
+    @Bean
+    public ResourceHttpRequestHandler faviconRequestHandler() {
+        ResourceHttpRequestHandler requestHandler = new ResourceHttpRequestHandler();
+        requestHandler.setLocations(this.resolveFaviconLocations());
+        return requestHandler;
+    }
+
+    private List<Resource> resolveFaviconLocations() {
+        String[] staticLocations = WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.getResourceLocations(this.resourceProperties.getStaticLocations());
+        List<Resource> locations = new ArrayList(staticLocations.length + 1);
+        Stream var10000 = Arrays.stream(staticLocations);
+        ResourceLoader var10001 = this.resourceLoader;
+        this.resourceLoader.getClass();
+        var10000.map(var10001::getResource).forEach(locations::add);
+        locations.add(new ClassPathResource("/"));
+        return Collections.unmodifiableList(locations);
+    }
+}
+```
+
+测试: 将`favicon.ico`放在`META-INF/resources`下(也是静态资源文件夹):
+
+![](images/sb41_web8.png)
+
+#### 3、模板引擎
+
+模板引擎的作用: 将页面模板和组装的数据交给模板引擎，模板引擎将页面中的表达式解析，填充到指定的位置，生成我们想要的内容。
+
+![](images/sb33_template-engine.png)

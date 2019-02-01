@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_02_config_6_autoconfig/springboot_02_config_6_autoconfig.iml" filepath="$PROJECT_DIR$/springboot_02_config_6_autoconfig/springboot_02_config_6_autoconfig.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_03_logging/springboot_03_logging.iml" filepath="$PROJECT_DIR$/springboot_03_logging/springboot_03_logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/springboot_03_logging_2_uselog4j2.iml" filepath="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/springboot_03_logging_2_uselog4j2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_04_web_primary/springboot_04_web_primary.iml" filepath="$PROJECT_DIR$/springboot_04_web_primary/springboot_04_web_primary.iml" />
     </modules>
   </component>
 </project>

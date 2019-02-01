@@ -15,6 +15,7 @@
         <module name="springboot_02_config_6_autoconfig" />
         <module name="springboot_03_logging" />
         <module name="springboot_03_logging_2_uselog4j2" />
+        <module name="springboot_04_web_primary" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +29,7 @@
       <module name="springboot_02_config_6_autoconfig" target="1.8" />
       <module name="springboot_03_logging" target="1.8" />
       <module name="springboot_03_logging_2_uselog4j2" target="1.8" />
+      <module name="springboot_04_web_primary" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

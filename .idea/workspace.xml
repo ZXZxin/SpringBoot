@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b50ef4a6-9f6f-41f0-a3c8-7c11e24ea0d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_11_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jul_2_11_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_11_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_2_1_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_03_logging/src/main/java/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/springboot_03_logging_2_uselog4j2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/java/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/log4j2-spring.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot_03_logging/src/main/resources/log4j.properties" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/springboot_03_logging/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/springboot_03_logging/src/main/resources/logback-spring.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/META-INF/resources/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_3_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/springboot_04_web_primary.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/css/signin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/img/bootstrap-solid.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/js/Chart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/js/feather.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/js/jquery-3.2.1.slim.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/js/popper.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
@@ -30,6 +33,7 @@
     <ignored path="$PROJECT_DIR$/springboot_02_config_6_autoconfig/target/" />
     <ignored path="$PROJECT_DIR$/springboot_03_logging/target/" />
     <ignored path="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_04_web_primary/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +42,45 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="WebMvcAutoConfiguration.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="534" column="8" lean-forward="false" selection-start-line="534" selection-start-column="8" selection-end-line="576" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/META-INF/resources/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringBoot04WebPrimaryApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/java/com/zxin/springboot/SpringBoot04WebPrimaryApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,6 +88,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addResources</find>
+      <find>addResourceHandlers</find>
+      <find>WelcomePage</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,9 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/springboot_02_config/src/main/java/com/zxin/springboot/Springboot02ConfigApplication.java" />
-        <option value="$PROJECT_DIR$/springboot_02_config/src/main/java/com/zxin/springboot/SpringBoot02ConfigApplication.java" />
-        <option value="$PROJECT_DIR$/springboot_02_config/src/test/java/com/zxin/springboot/SpringBoot02ConfigApplicationTests.java" />
         <option value="$PROJECT_DIR$/springboot_02_config/src/main/java/readme.md" />
         <option value="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/main/java/com/zxin/springboot/SpringBoot02Config2PropertiesonfigApplication.java" />
         <option value="$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/pom.xml" />
@@ -109,6 +155,9 @@
         <option value="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/log4j2-spring.xml" />
         <option value="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/java/readme.md" />
         <option value="$PROJECT_DIR$/springboot_03_logging/src/main/java/readme.md" />
+        <option value="$PROJECT_DIR$/springboot_04_web_primary/src/main/java/com/zxin/springboot/SpringBoot04WebPrimaryApplication.java" />
+        <option value="$PROJECT_DIR$/springboot_04_web_primary/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/public/index.html" />
       </list>
     </option>
   </component>
@@ -146,10 +195,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2264" />
-    <option name="y" value="37" />
-    <option name="width" value="782" />
-    <option name="height" value="997" />
+    <option name="x" value="1978" />
+    <option name="y" value="112" />
+    <option name="width" value="1608" />
+    <option name="height" value="961" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -160,7 +209,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -178,51 +227,183 @@
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxin" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot_04_web_primary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-boot-1.5.9.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
+              <item name="jquery-3.3.1-1.jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-boot-1.5.9.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
+              <item name="jquery-3.3.1-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-boot-1.5.9.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
+              <item name="jquery-3.3.1-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-boot-1.5.9.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
-              <item name="log4j2" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
+              <item name="jquery-3.3.1-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="webjars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
+              <item name="jquery-3.3.1-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="webjars" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.webjars:jquery:3.3.1-1" type="70bed36:NamedLibraryElementNode" />
+              <item name="jquery-3.3.1-1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="webjars" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="3.3.1-1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,11 +427,11 @@
       <recent name="com.zxin.springboot.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/META-INF/resources" />
+      <recent name="$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources" />
       <recent name="$PROJECT_DIR$/springboot_03_logging/src/main/resources" />
       <recent name="$PROJECT_DIR$/springboot_02_config_5_locationofproperties/config" />
-      <recent name="$PROJECT_DIR$/springboot_02_config_5_locationofproperties" />
-      <recent name="$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/resources/config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -265,7 +446,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Springboot03Logging2Uselog4j2Application">
+  <component name="RunManager" selected="Spring Boot.Springboot04WebPrimaryApplication">
     <configuration name="HelloWorldMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zxin.HelloWorldMainApplication" />
@@ -463,6 +644,13 @@
       <module name="springboot_03_logging" />
       <envs />
     </configuration>
+    <configuration name="Springboot04WebPrimaryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zxin.springboot.SpringBoot04WebPrimaryApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="springboot_04_web_primary" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -550,7 +738,7 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="15">
+    <list size="16">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.HelloWorldMainApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.Springboot02ConfigApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.SpringBoot02ConfigApplication" />
@@ -558,14 +746,15 @@
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config3PropertysourceImportresourceApplication" />
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config4ProfileApplication" />
       <item index="6" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config5LocationofpropertiesApplication" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.SpringBoot02ConfigApplicationTests.contextLoads" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config2PropertiesonfigApplicationTests.contextLoads" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.contextLoads" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.testIsContainHelloService" />
-      <item index="11" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config6AutoconfigApplication" />
-      <item index="12" class="java.lang.String" itemvalue="Spring Boot.Springboot03LoggingApplication" />
-      <item index="13" class="java.lang.String" itemvalue="JUnit.SpringBoot03LoggingApplicationTests.contextLoads" />
-      <item index="14" class="java.lang.String" itemvalue="Spring Boot.Springboot03Logging2Uselog4j2Application" />
+      <item index="7" class="java.lang.String" itemvalue="Spring Boot.Springboot02Config6AutoconfigApplication" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.Springboot03LoggingApplication" />
+      <item index="9" class="java.lang.String" itemvalue="Spring Boot.Springboot03Logging2Uselog4j2Application" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.SpringBoot02ConfigApplicationTests.contextLoads" />
+      <item index="11" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config2PropertiesonfigApplicationTests.contextLoads" />
+      <item index="12" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.contextLoads" />
+      <item index="13" class="java.lang.String" itemvalue="JUnit.SpringBoot02Config3PropertySourceImportResourceApplicationTests.testIsContainHelloService" />
+      <item index="14" class="java.lang.String" itemvalue="JUnit.SpringBoot03LoggingApplicationTests.contextLoads" />
+      <item index="15" class="java.lang.String" itemvalue="Spring Boot.Springboot04WebPrimaryApplication" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -595,7 +784,8 @@
       <workItem from="1548736924129" duration="1367000" />
       <workItem from="1548742487374" duration="11706000" />
       <workItem from="1548856467863" duration="3461000" />
-      <workItem from="1548898767381" duration="14997000" />
+      <workItem from="1548898767381" duration="17063000" />
+      <workItem from="1548981452292" duration="5269000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1548580697647</created>
@@ -640,10 +830,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45743000" />
+    <option name="totallyTimeSpent" value="53078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -652,15 +843,15 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21132898" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38779956" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.060832445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06100218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1956" y="202" width="1884" height="500" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06100218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1956" y="202" width="1884" height="500" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58278865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17235859" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22091782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -709,59 +900,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application.properties" />
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/SpringBoot02Config5LocationOfPropertiesApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/application.properties" />
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/SpringBoot02Config5LocationOfPropertiesApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/config/application.properties" />
-    <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/java/com/zxin/springboot/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot_02_config_5_locationofproperties/src/main/resources/config/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,9 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="639" column="30" lean-forward="false" selection-start-line="639" selection-start-column="30" selection-end-line="639" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
           <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,9 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#2924#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,28 +991,27 @@
         <state relative-caret-position="286">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#353#354#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_03_logging/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar!/org/slf4j/bridge/SLF4JBridgeHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,9 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1475,11 +1599,12 @@
               <point x="-83.0" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0919082125603867" x="856.7986948346421" y="934.7986948346421" />
+          <settings layout="Hierarchic Group" zoom="1.0919082125603867" x="857.0" y="935.0" />
           <SelectedNodes>
             <node>org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
@@ -1488,7 +1613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,7 +1620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1520,7 +1643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198">
           <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,9 +1650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1538,7 +1657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1546,7 +1664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1554,34 +1671,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_03_logging/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="95" lean-forward="false" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_03_logging/app/log/zxin-springboot.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_03_logging/src/main/resources/log4j.properties" />
+    <entry file="file://$PROJECT_DIR$/springboot_03_logging/app/log/zxin-springboot.log" />
+    <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/logback-spring.xml" />
     <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1595,8 +1690,8 @@
         <state relative-caret-position="110">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="false" />
+            <element signature="e#333#334#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1605,7 +1700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2184,23 +2278,17 @@
               <point x="-83.0" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.12094395280236" x="404.10526315789474" y="749.1052631578948" />
+          <settings layout="Hierarchic Group" zoom="1.12094395280236" x="404.0" y="749.0" />
           <SelectedNodes>
             <node>org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot:jar:2.1.2.RELEASE</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/log4j.properties" />
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot/1.5.9.RELEASE/spring-boot-1.5.9.RELEASE.jar!/org/springframework/boot/logging/log4j2/log4j2-file.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2217,31 +2305,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/java/com/zxin/springboot/SpringBoot03Logging2UseLog4j2Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/resources/log4j2-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/java/readme.md">
@@ -2249,7 +2328,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="66">
             <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -2260,10 +2338,84 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/ResourceProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding>
+            <element signature="e#4134#4135#0" expanded="true" />
+            <element signature="e#4179#4180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/src/main/java/com/zxin/springboot/SpringBoot03Logging2UseLog4j2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/static/asserts/js/Chart.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="289" lean-forward="true" selection-start-line="9" selection-start-column="289" selection-end-line="9" selection-end-column="289" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="534" column="8" lean-forward="false" selection-start-line="534" selection-start-column="8" selection-end-line="576" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/java/com/zxin/springboot/SpringBoot04WebPrimaryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_primary/src/main/resources/META-INF/resources/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
