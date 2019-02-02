@@ -13,5 +13,6 @@
     <file url="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_primary" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_04_web_restfulcrud" charset="UTF-8" />
   </component>
 </project>

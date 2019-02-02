@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/springboot_03_logging_2_uselog4j2.iml" filepath="$PROJECT_DIR$/springboot_03_logging_2_uselog4j2/springboot_03_logging_2_uselog4j2.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_04_web_primary/springboot_04_web_primary.iml" filepath="$PROJECT_DIR$/springboot_04_web_primary/springboot_04_web_primary.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/springboot_04_web_primary2_thymeleaf.iml" filepath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/springboot_04_web_primary2_thymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/springboot_04_web_restfulcrud.iml" filepath="$PROJECT_DIR$/springboot_04_web_restfulcrud/springboot_04_web_restfulcrud.iml" />
     </modules>
   </component>
 </project>
