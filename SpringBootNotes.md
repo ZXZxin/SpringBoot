@@ -2456,23 +2456,147 @@ public LocaleResolver localeResolver(){
 }
 ```
 
-#### 3）、登陆
+#### (3)、登陆
 
-开发期间模板引擎页面修改以后，要实时生效
+**开发期间模板引擎页面修改以后，要实时生效：**
 
-1）、禁用模板引擎的缓存
+1）、禁用模板引擎的缓存；
+
+```properties
+# 禁用模板引擎的缓存 (这样就不会在更改html代码的时候没有立即显示改变)，然后IDEA CTRL + F9重新编译一下
+spring.thymeleaf.cache=false
+```
+
+2）、页面修改完成以后`ctrl+f9`：重新编译；
+
+
+
+**实现登录的前端代码，在`form`表单添加`action`：**
+
+![](images/sb54_web21.png)
+
+具体代码:
+
+```html
+<body class="text-center">
+		<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
+			<!--注意下面的th:src的路径前面带了一个/ 不然到了/user/login页面，图片不会显示-->
+			<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+			<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+			<label class="sr-only" th:text="#{login.username}">Username</label>
+			<input type="text" name="username" class="form-control" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
+			<label class="sr-only" th:text="#{login.password}">Password</label>
+			<input type="password" name="password" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
+			<div class="checkbox mb-3">
+				<label>
+          		<input type="checkbox" value="remember-me"/> [[#{login.remember}]]
+        </label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}">Sign in</button>
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+			<a class="btn btn-sm" th:href="@{/index.html(l='zh_CN')}">中文</a>
+			<a class="btn btn-sm" th:href="@{/index.html(l='en_US')}">English</a>
+		</form>
+	</body>
 
 ```
-# 禁用缓存
-spring.thymeleaf.cache=false 
-```
-
-2）、页面修改完成以后ctrl+f9：重新编译；
-
-
 
 登陆错误消息的显示
 
 ```html
 <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
 ```
+![](images/sb55_web22.png)
+
+
+
+后台`Java`代码:
+
+```java
+@Controller
+public class LoginController {
+
+//    @GetMapping
+//    @PutMapping
+//    @DeleteMapping
+//    @RequestMapping(value = "/user/login", method = RequestMethod.POST) //太长
+    @PostMapping(value = "/user/login")
+    public String login(@RequestParam("username") String username,
+                        @RequestParam("password") String password,
+                        Map<String, Object>map){
+        if(!StringUtils.isEmpty(username) && "123456".equals(password)){
+            return "dashboard";
+        }else {
+            // 登录失败
+            map.put("msg", "用户名密码错误");
+            return "login";
+        }
+    }
+}
+
+```
+
+
+
+**防止表单的重复提交**
+
+![](images/sb56_web23.png)
+
+#### (4)、拦截器进行登录检查
+
+**如果按照上面的处理(对重复提交表单的处理)会发生你登录之后在另一个浏览器中不需要登录可以直接访问`dashboard.html(main.html)`的情况，所以要使用拦截器`interceptor`进行拦截器检查。**
+
+自已定义一个`LoginHandlerInterceptor`
+
+```java
+/**
+ * 登录检查
+ */
+public class LoginHandlerInterceptor implements HandlerInterceptor {
+
+    //目标方法执行之前
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        Object user = request.getSession().getAttribute("loginUser");
+        if(user == null){
+            // 未登录，返回登录页面
+            request.setAttribute("msg", "没有权限，请先登录");
+            request.getRequestDispatcher("/index.html").forward(request, response);
+            return false;
+        }else {
+            //已登录, 放行请求
+            return true;
+        }
+    }
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
+
+    }
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable Exception ex) throws Exception {
+
+    }
+}
+
+```
+
+在MVC的配置类`MyMvcConfig`注册拦截器:
+
+```java
+// 注册拦截器
+@Override
+public void addInterceptors(InterceptorRegistry registry) {
+    // 除了  "/index.html", "/", "/user/login"  都要拦截
+    // 以前SpringMVC还需要配置： 不能拦截静态资源，
+    // 现在SpringBoot已经做好了不拦截静态资源的配置
+    registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+        .excludePathPatterns("/index.html", "/", "/user/login"
+                            );
+}
+    }
+```
+
+效果:
+
+![](images/sb57_web24.png)

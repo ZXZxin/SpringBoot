@@ -14,8 +14,8 @@
 	</head>
 
 	<body class="text-center">
-	<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
-			<!--注意下面的th:src的路径前面带了一个/ -->
+		<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
+			<!--注意下面的th:src的路径前面带了一个/ 不然到了/user/login页面，图片不会显示-->
 			<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
 			<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
@@ -33,7 +33,6 @@
 			<a class="btn btn-sm" th:href="@{/index.html(l='zh_CN')}">中文</a>
 			<a class="btn btn-sm" th:href="@{/index.html(l='en_US')}">English</a>
 		</form>
-
 	</body>
 
 </html>
