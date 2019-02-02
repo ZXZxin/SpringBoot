@@ -2335,15 +2335,11 @@ public class MessageSourceAutoConfiguration {
 }
 ```
 
-
-
 3）、编写配置基础名的配置文件代码；
 
 ```properties
 spring.messages.basename=i18n.login
 ```
-
-
 
 4）、去页面获取国际化的值；
 
@@ -2460,3 +2456,23 @@ public LocaleResolver localeResolver(){
 }
 ```
 
+#### 3）、登陆
+
+开发期间模板引擎页面修改以后，要实时生效
+
+1）、禁用模板引擎的缓存
+
+```
+# 禁用缓存
+spring.thymeleaf.cache=false 
+```
+
+2）、页面修改完成以后ctrl+f9：重新编译；
+
+
+
+登陆错误消息的显示
+
+```html
+<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+```

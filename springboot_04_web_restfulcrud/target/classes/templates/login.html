@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,13 +14,15 @@
 	</head>
 
 	<body class="text-center">
-		<form class="form-signin" action="dashboard.html">
-			<img class="mb-4" th:src="@{asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+	<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
+			<!--注意下面的th:src的路径前面带了一个/ -->
+			<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+			<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
 			<label class="sr-only" th:text="#{login.username}">Username</label>
-			<input type="text" class="form-control" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
+			<input type="text" name="username" class="form-control" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
 			<label class="sr-only" th:text="#{login.password}">Password</label>
-			<input type="password" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
+			<input type="password" name="password" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
 			<div class="checkbox mb-3">
 				<label>
           		<input type="checkbox" value="remember-me"/> [[#{login.remember}]]

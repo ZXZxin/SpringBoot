@@ -7,5 +7,4 @@
     <!--如果不使用ImportResource注解，这个配置文件默认是不会被扫描到的，也就是这个Service不会注入到容器中-->
     <bean id = "helloService" class="com.zxin.springboot.service.HelloService">
     </bean>
-
 </beans>
