@@ -16,7 +16,6 @@ public class SpringBoot04WebPrimary2ThymeleafApplication {
 		SpringApplication.run(SpringBoot04WebPrimary2ThymeleafApplication.class, args);
 	}
 
-
 	@Bean
 	public ViewResolver myViewResolver(){
 		return new MyViewResolver();

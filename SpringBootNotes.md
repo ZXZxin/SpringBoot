@@ -2600,3 +2600,367 @@ public void addInterceptors(InterceptorRegistry registry) {
 效果:
 
 ![](images/sb57_web24.png)
+
+#### (5)、CRUD员工列表
+
+实验要求：
+
+1）、`RestfulCRUD`：CRUD满足`Rest`风格；
+
+**URI：  /资源名称/资源标识    :  HTTP请求方式区分对资源CRUD操作**
+
+|      | 普通CRUD（uri来区分操作） | RestfulCRUD       |
+| ---- | :------------------------ | ----------------- |
+| 查询 | getEmp                    | emp---GET         |
+| 添加 | addEmp?xxx                | emp---POST        |
+| 修改 | updateEmp?id=xxx&ooo=xx   | emp/{id}---PUT    |
+| 删除 | deleteEmp?id=1            | emp/{id}---DELETE |
+
+2）、实验的请求架构;
+
+| 实验功能                             | 请求URI             | 请求方式   |
+| ------------------------------------ | ------------------- | ---------- |
+| 查询所有员工                         | `emps`              | GET        |
+| 查询某个员工(来到修改页面)           | `emp/1`(`emp/{id}`) | GET        |
+| 来到添加页面                         | emp                 | GET        |
+| 添加员工                             | emp                 | **POST**   |
+| 来到修改页面（查出员工进行信息回显） | emp/1               | GET        |
+| 修改员工                             | emp                 | **PUT**    |
+| 删除员工                             | emp/1               | **DELETE** |
+
+3）、员工列表：
+
+**`thymeleaf`公共页面元素抽取(因为员工列表页面list.html的顶部和左边都是和dashboard.html相同，所以可以将公共部分抽取出来)**
+
+```html
+1、抽取公共片段
+<div th:fragment="copy">
+&copy; 2011 The Good Thymes Virtual Grocery
+</div>
+
+2、引入公共片段
+<div th:insert="~{footer :: copy}"></div>
+~{templatename::selector}：模板名::选择器
+~{templatename::fragmentname}:模板名::片段名
+
+3、默认效果：
+insert的公共片段在div标签中
+如果使用th:insert等属性进行引入，可以不用写~{}：
+行内写法可以(必须)加上：[[~{}]];[(~{})]；
+```
+三种引入公共片段的th属性：
+
+**th:insert**：将公共片段整个插入到声明引入的元素中
+
+**th:replace**：将声明引入的元素替换为公共片段
+
+**th:include**：将被引入的片段的内容包含进这个标签中
+
+```html
+<footer th:fragment="copy">
+&copy; 2011 The Good Thymes Virtual Grocery
+</footer>
+
+引入方式
+<div th:insert="footer :: copy"></div>
+<div th:replace="footer :: copy"></div>
+<div th:include="footer :: copy"></div>
+
+效果
+1. insert
+<div>
+    <footer>
+    &copy; 2011 The Good Thymes Virtual Grocery
+    </footer>
+</div>
+2. replace
+<footer>
+&copy; 2011 The Good Thymes Virtual Grocery
+</footer>
+3. th:include
+<div>
+&copy; 2011 The Good Thymes Virtual Grocery
+</div>
+```
+
+
+`dashboard.html`顶部公共元素抽取:
+
+![](images/sb58_web25.png)
+
+在`list.html`中引入:
+
+![](images/sb61_web28.png)
+
+`dashboard.html`侧栏公共元素抽取:
+
+![](images/sb59_web26.png)
+
+在`list.html`中引入:
+
+先删除原来的`nav`标签(侧栏):
+
+![](images/sb60_web27.png)
+
+引入新的:
+
+![](images/sb62_web29.png)
+
+
+
+**引入片段的时候传入参数：** (**这个解决的就是侧栏的点击高亮问题(当前选项高亮)**)
+
+此时将公共部分抽取出来`bar.html`(不是将公共部分继续放在`dashboard.html`中):
+
+(1).`bar.html`中添加`th:class`属性判断(带参数)
+
+```html
+DashBoard部分
+<li class="nav-item">
+     <a class="nav-link active"
+        th:class="${activeUri=='main.html'?'nav-link active':'nav-link'}"<!--重要-->
+        href="#" th:href="@{/main.html}">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+             <polyline points="9 22 9 12 15 12 15 22"></polyline>
+         </svg>
+         Dashboard <span class="sr-only">(current)</span>
+     </a>
+</li>
+
+员工管理部分
+ <li class="nav-item">
+     <a class="nav-link" href="#" th:href="@{/emps}"
+        th:class="${activeUri=='emps'?'nav-link active':'nav-link'}"> <!--发送restful式的请求，查看所有的员工-->
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+             <circle cx="9" cy="7" r="4"></circle>
+             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+         </svg>
+         员工管理
+     </a>
+</li>
+```
+
+(2). `list.html`和`dashboard.html`引入更改:
+
+```html
+list.html
+<!--引入公共部分topbar-->
+<div th:replace="commons/bar::topbar"></div>
+<div class="container-fluid">
+    <div class="row">
+        <!--引入侧边栏-->
+        <!--<div th:replace="~{dashboard::#sidebar}"></div>-->
+        <div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
+        
+        
+dashboard.html    
+<!--引入公共部分topbar-->
+<div th:replace="commons/bar::topbar"></div>
+<div class="container-fluid">
+	<div class="row">
+<!--引入公共部分sidebar-->
+		<div th:replace="commons/bar::#sidebar(activeUri='main.html')"></div>              
+```
+
+`list.html`页面员工展示:
+
+```html
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>lastName</th>
+                <th>email</th>
+                <th>gender</th>
+                <th>department</th>
+                <th>birth</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="emp:${emps}">
+                <td th:text="${emp.id}"></td>
+                <td>[[${emp.lastName}]]</td>
+                <td th:text="${emp.email}"></td>
+                <td th:text="${emp.gender}==0?'女':'男'"</td>
+                <td th:text="${emp.department.departmentName}"></td>
+                <!--<td th:text="${emp.birth}"></td>-->
+                <!--日期格式化-->
+                <td th:text="${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}"></td>
+                <td>
+                    <!--小号的蓝颜色的bootstrap的按钮-->
+                    <button class="btn btn-sm btn-primary">编辑</button>
+                    <!--小号的红颜色的bootstrap的按钮-->
+                    <button class="btn btn-sm btn-danger">删除</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+```
+
+效果:
+
+![](images/sb63_web30.png)
+
+#### (6)、CRUD员工添加
+
+`list`页面添加按钮:
+
+```html
+<h2><a class="btn btn-sm btn-success" href="emp" th:href="@{/emp}">员工添加</a></h2>
+```
+
+
+
+`controlloer`:
+
+```java
+//来到员工添加页面
+@GetMapping("/emp")
+public String toAddPage(Model model){
+
+    //来到添加页面, 需要所有的部门，在页面显示
+    Collection<Department> departments = departmentDao.getDepartments();
+    model.addAttribute("depts", departments);
+
+    return "emp/add";
+}
+```
+
+
+
+`add.html`页面中的表单添加页面
+
+```html
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+    <!--不是之前的list.html的内容，而是一个表单添加员工-->
+    <!--表单在bootstrap中有-->
+    <form>
+        <div class="form-group">
+            <label>LastName</label>
+            <input type="text" class="form-control" placeholder="zhangsan">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="zhangsan@163.com">
+        </div>
+        <div class="form-group">
+            <label>Gender</label><br/>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender"  value="1">
+                <label class="form-check-label">男</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender"  value="0">
+                <label class="form-check-label">女</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>department</label>
+            <select class="form-control">
+                <!--提交的是部门的id-->
+                <option th:value="dept.id" th:each="dept:${depts}" th:text="${dept.departmentName}">1</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Birth</label>
+            <input type="text" class="form-control" placeholder="zhangsan">
+        </div>
+        <button type="submit" class="btn btn-primary">添加</button>
+    </form>
+
+</main>
+```
+
+提交的数据格式不对：生日：日期；
+
+2017-12-12；2017/12/12；2017.12.12；
+
+日期的格式化；SpringMVC将页面提交的值需要转换为指定的类型;
+
+2017-12-12---Date； 类型转换，格式化;
+
+默认日期是按照/的方式；
+
+#### (7)、CRUD员工修改
+
+修改添加二合一表单
+
+```html
+<!--需要区分是员工修改还是添加；-->
+<form th:action="@{/emp}" method="post">
+    <!--发送put请求修改员工数据-->
+    <!--
+1、SpringMVC中配置HiddenHttpMethodFilter;（SpringBoot自动配置好的）
+2、页面创建一个post表单
+3、创建一个input项，name="_method";值就是我们指定的请求方式
+-->
+    <input type="hidden" name="_method" value="put" th:if="${emp!=null}"/>
+    <input type="hidden" name="id" th:if="${emp!=null}" th:value="${emp.id}">
+    <div class="form-group">
+        <label>LastName</label>
+        <input name="lastName" type="text" class="form-control" placeholder="zhangsan" th:value="${emp!=null}?${emp.lastName}">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input name="email" type="email" class="form-control" placeholder="zhangsan@atguigu.com" th:value="${emp!=null}?${emp.email}">
+    </div>
+    <div class="form-group">
+        <label>Gender</label><br/>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="1" th:checked="${emp!=null}?${emp.gender==1}">
+            <label class="form-check-label">男</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="0" th:checked="${emp!=null}?${emp.gender==0}">
+            <label class="form-check-label">女</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>department</label>
+        <!--提交的是部门的id-->
+        <select class="form-control" name="department.id">
+            <option th:selected="${emp!=null}?${dept.id == emp.department.id}" th:value="${dept.id}" th:each="dept:${depts}" th:text="${dept.departmentName}">1</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Birth</label>
+        <input name="birth" type="text" class="form-control" placeholder="zhangsan" th:value="${emp!=null}?${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}">
+    </div>
+    <button type="submit" class="btn btn-primary" th:text="${emp!=null}?'修改':'添加'">添加</button>
+</form>
+```
+
+#### (8)、CRUD员工删除
+
+```html
+<tr th:each="emp:${emps}">
+    <td th:text="${emp.id}"></td>
+    <td>[[${emp.lastName}]]</td>
+    <td th:text="${emp.email}"></td>
+    <td th:text="${emp.gender}==0?'女':'男'"></td>
+    <td th:text="${emp.department.departmentName}"></td>
+    <td th:text="${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}"></td>
+    <td>
+        <a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.id}">编辑</a>
+        <button th:attr="del_uri=@{/emp/}+${emp.id}" class="btn btn-sm btn-danger deleteBtn">删除</button>
+    </td>
+</tr>
+
+
+<script>
+    $(".deleteBtn").click(function(){
+        //删除当前员工的
+        $("#deleteEmpForm").attr("action",$(this).attr("del_uri")).submit();
+        return false;
+    });
+</script>
+```
