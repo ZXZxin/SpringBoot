@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b50ef4a6-9f6f-41f0-a3c8-7c11e24ea0d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/commons/bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/templates/list.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/list.html" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/target/classes/com/zxin/springboot/SpringBoot04WebPrimary2ThymeleafApplication$MyViewResolver.class" afterPath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/target/classes/com/zxin/springboot/SpringBoot04WebPrimary2ThymeleafApplication$MyViewResolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/target/classes/com/zxin/springboot/SpringBoot04WebPrimary2ThymeleafApplication.class" afterPath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/target/classes/com/zxin/springboot/SpringBoot04WebPrimary2ThymeleafApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/com/zxin/springboot/dao/EmployeeDao.class" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/com/zxin/springboot/dao/EmployeeDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/myadd.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/mylist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/com/zxin/springboot/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/com/zxin/springboot/controller/EmployeeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringBootNotes.md" afterPath="$PROJECT_DIR$/SpringBootNotes.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/src/main/java/com/zxin/springboot/SpringBoot04WebPrimary2ThymeleafApplication.java" afterPath="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/src/main/java/com/zxin/springboot/SpringBoot04WebPrimary2ThymeleafApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/DepartmentDao.java" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/DepartmentDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/EmployeeDao.java" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/EmployeeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/dashboard.html" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/templates/dashboard.html" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/application.properties" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/templates/emp/add.html" afterPath="$PROJECT_DIR$/springboot_04_web_restfulcrud/target/classes/templates/emp/add.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="129">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="77" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,8 +53,28 @@
       <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+            <state relative-caret-position="615">
+              <caret line="104" column="15" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="104" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myadd.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/myadd.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1276">
+              <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,48 +83,8 @@
       <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/entities/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-110">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="60" column="102" lean-forward="true" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/EmployeeDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/DepartmentDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="75" column="100" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="100" />
+            <state relative-caret-position="286">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -118,21 +94,28 @@
         <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/commons/bar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+              <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringBoot04WebRestfulCrudApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/SpringBoot04WebRestfulCrudApplication.java">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-999">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mylist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/mylist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,6 +125,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
               <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringBoot04WebRestfulCrudApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/SpringBoot04WebRestfulCrudApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/springboot_02_config_6_autoconfig/src/main/java/com/zxin/springboot/SpringBoot02Config6AutoconfigApplication.java" />
         <option value="$PROJECT_DIR$/springboot_03_logging/src/main/java/com/zxin/springboot/SpringBoot03LoggingApplication.java" />
         <option value="$PROJECT_DIR$/springboot_03_logging/src/test/java/com/zxin/springboot/SpringBoot03LoggingApplicationTests.java" />
         <option value="$PROJECT_DIR$/springboot_03_logging/src/main/resources/application.properties" />
@@ -221,7 +213,6 @@
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/i18n/login_en_US.properties" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/component/MyLocaleResolver.java" />
-        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/config/MyMvcConfig.java" />
@@ -230,10 +221,12 @@
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/commons/bar.html" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/DepartmentDao.java" />
+        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html" />
+        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/mylist.html" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html" />
-        <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/DepartmentDao.java" />
       </list>
     </option>
   </component>
@@ -286,6 +279,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -486,9 +481,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,22 +498,22 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.35829493" />
-    <property name="SearchEverywhereHistoryKey" value="HttpEncoding&#9;FILE&#9;jar:///home/zxzxin/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.9.RELEASE/spring-boot-autoconfigure-1.5.9.RELEASE.jar!/org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class" />
+    <property name="SearchEverywhereHistoryKey" value="ThymeleafView&#9;FILE&#9;jar:///home/zxzxin/.m2/repository/org/thymeleaf/thymeleaf-spring5/3.0.11.RELEASE/thymeleaf-spring5-3.0.11.RELEASE.jar!/org/thymeleaf/spring5/view/ThymeleafViewResolver.class&#10;HttpEncoding&#9;FILE&#9;jar:///home/zxzxin/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.9.RELEASE/spring-boot-autoconfigure-1.5.9.RELEASE.jar!/org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zxin.springboot.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp" />
       <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot" />
       <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/entities" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zxin.springboot.controller" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -899,7 +892,8 @@
       <workItem from="1549241625439" duration="2939000" />
       <workItem from="1549341235774" duration="815000" />
       <workItem from="1549433513294" duration="698000" />
-      <workItem from="1549586265218" duration="7325000" />
+      <workItem from="1549586265218" duration="7924000" />
+      <workItem from="1549696103036" duration="4265000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1548580697647</created>
@@ -944,10 +938,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90441000" />
+    <option name="totallyTimeSpent" value="95305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1037" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1023" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -957,7 +951,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14628571" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06100218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1956" y="202" width="1884" height="500" />
@@ -965,7 +959,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58278865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18516542" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20651014" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1014,31 +1008,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-starter-parent/2.1.2.RELEASE/spring-boot-starter-parent-2.1.2.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-starter-parent/1.5.9.RELEASE/spring-boot-starter-parent-1.5.9.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot_02_config_2_propertiesonfig/src/main/java/com/zxin/springboot/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1231,9 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1241,25 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,15 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,57 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="60" column="102" lean-forward="true" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/entities/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/entities/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/SpringBoot04WebRestfulCrudApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/commons/bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1362,29 +1248,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/thymeleaf/thymeleaf-spring5/3.0.11.RELEASE/thymeleaf-spring5-3.0.11.RELEASE.jar!/org/thymeleaf/spring5/view/ThymeleafViewResolver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="-858">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#10744#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html">
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/EmployeeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        <state relative-caret-position="97">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="60" column="102" lean-forward="false" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/commons/bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/mylist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/SpringBoot04WebRestfulCrudApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/entities/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/entities/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/myadd.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="75" column="100" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="100" />
+        <state relative-caret-position="-999">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/resources/templates/emp/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="104" column="15" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="104" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -2834,8 +2834,6 @@ public String toAddPage(Model model){
 }
 ```
 
-
-
 `add.html`页面中的表单添加页面
 
 ```html
@@ -2872,7 +2870,7 @@ public String toAddPage(Model model){
         </div>
         <div class="form-group">
             <label>Birth</label>
-            <input type="text" class="form-control" placeholder="zhangsan">
+            <input type="text" class="form-control" placeholder="2001-01-01">
         </div>
         <button type="submit" class="btn btn-primary">添加</button>
     </form>
@@ -2884,15 +2882,22 @@ public String toAddPage(Model model){
 
 2017-12-12；2017/12/12；2017.12.12；
 
+配置(`application.properties`中配置)
+
+```properties
+# 日期格式化
+spring.mvc.date-format=yyyy-MM-dd
+```
+
 日期的格式化；SpringMVC将页面提交的值需要转换为指定的类型;
 
 2017-12-12---Date； 类型转换，格式化;
 
-默认日期是按照/的方式；
+**默认日期是按照/的方式；**
 
 #### (7)、CRUD员工修改
 
-修改添加二合一表单
+**修改添加二合一表单**
 
 ```html
 <!--需要区分是员工修改还是添加；-->
@@ -2939,6 +2944,41 @@ public String toAddPage(Model model){
 </form>
 ```
 
+后台`java`代码:
+
+来到修改页面代码:
+
+```javascript
+//来到修改页面，查出当前员工，在页面回显
+@GetMapping("/emp/{id}")
+public String toEditPage(@PathVariable("id") Integer id, Model model){
+    Employee employee = employeeDao.get(id);
+    model.addAttribute("emp",employee);
+
+    //页面要显示所有的部门列表
+    Collection<Department> departments = departmentDao.getDepartments();
+    model.addAttribute("depts",departments);
+    //回到修改页面(add是一个修改添加二合一的页面);
+    return "emp/add";
+}
+```
+
+真正修改:
+
+
+```java
+//员工修改；需要提交员工id；
+@PutMapping("/emp")
+public String updateEmployee(Employee employee){
+    System.out.println("修改的员工数据："+employee);
+    employeeDao.save(employee);
+    return "redirect:/emps";
+}
+
+```
+
+
+
 #### (8)、CRUD员工删除
 
 ```html
@@ -2955,7 +2995,6 @@ public String toAddPage(Model model){
     </td>
 </tr>
 
-
 <script>
     $(".deleteBtn").click(function(){
         //删除当前员工的
@@ -2964,3 +3003,15 @@ public String toAddPage(Model model){
     });
 </script>
 ```
+
+后台java代码:
+
+```java
+//员工删除
+@DeleteMapping("/emp/{id}")
+public String deleteEmployee(@PathVariable("id") Integer id){
+    employeeDao.delete(id);
+    return "redirect:/emps";
+}
+```
+
