@@ -19,6 +19,7 @@
         <module name="springboot_04_web_primary2_thymeleaf" />
         <module name="springboot_04_web_restfulcrud" />
         <module name="springboot_04_web_witherrorhandle" />
+        <module name="springboot_04_web_withservletcontainer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,7 +38,9 @@
       <module name="springboot_04_web_primary" target="1.8" />
       <module name="springboot_04_web_primary2_thymeleaf" target="1.8" />
       <module name="springboot_04_web_restfulcrud" target="1.8" />
+      <module name="springboot_04_web_servletcontainer" target="1.8" />
       <module name="springboot_04_web_witherrorhandle" target="1.8" />
+      <module name="springboot_04_web_withservletcontainer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -33,7 +33,9 @@ public class MyExceptionHandler {
          */
         request.setAttribute("javax.servlet.error.status_code",500);
         map.put("code","user.not exist");
-        map.put("message",e.getMessage());
+        map.put("message","用户出错了");
+
+        request.setAttribute("extMap", map);
         //转发到/error
         return "forward:/error";
     }
