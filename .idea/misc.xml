@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/springboot_04_web_primary/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_04_web_witherrorhandle/pom.xml" />
       </list>
     </option>
   </component>
