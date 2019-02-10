@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/springboot_04_web_restfulcrud.iml" filepath="$PROJECT_DIR$/springboot_04_web_restfulcrud/springboot_04_web_restfulcrud.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_04_web_witherrorhandle/springboot_04_web_witherrorhandle.iml" filepath="$PROJECT_DIR$/springboot_04_web_witherrorhandle/springboot_04_web_witherrorhandle.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer/springboot_04_web_withservletcontainer.iml" filepath="$PROJECT_DIR$/springboot_04_web_withservletcontainer/springboot_04_web_withservletcontainer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/springboot_04_web_withservletcontainer_external.iml" filepath="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/springboot_04_web_withservletcontainer_external.iml" />
     </modules>
   </component>
 </project>

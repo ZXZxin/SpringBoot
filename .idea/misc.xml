@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -17,6 +20,7 @@
         <option value="$PROJECT_DIR$/springboot_04_web_restfulcrud/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_witherrorhandle/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_withservletcontainer/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/pom.xml" />
       </list>
     </option>
   </component>

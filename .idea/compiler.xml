@@ -20,6 +20,7 @@
         <module name="springboot_04_web_restfulcrud" />
         <module name="springboot_04_web_witherrorhandle" />
         <module name="springboot_04_web_withservletcontainer" />
+        <module name="springboot_04_web_withservletcontainer_external" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -41,6 +42,7 @@
       <module name="springboot_04_web_servletcontainer" target="1.8" />
       <module name="springboot_04_web_witherrorhandle" target="1.8" />
       <module name="springboot_04_web_withservletcontainer" target="1.8" />
+      <module name="springboot_04_web_withservletcontainer_external" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

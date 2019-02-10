@@ -3668,11 +3668,11 @@ ServerProperties也是定制器 (实现了EmbeddedServletContainerCustomizer接�
 
 获取嵌入式的Servlet容器工厂：
 
-1）、SpringBoot应用启动运行run方法
+1）、SpringBoot应用启动运行`run`方法；
 
-2）、refreshContext(context);SpringBoot刷新IOC容器【创建IOC容器对象，并初始化容器，创建容器中的每一个组件】；如果是web应用创建**AnnotationConfigEmbeddedWebApplicationContext**，否则：**AnnotationConfigApplicationContext**
+2）、`refreshContext(context);`SpringBoot刷新IOC容器【创建IOC容器对象，并初始化容器，创建容器中的每一个组件】；如果是web应用创建**AnnotationConfigEmbeddedWebApplicationContext**，否则：**AnnotationConfigApplicationContext**；
 
-3）、refresh(context);**刷新刚才创建好的ioc容器；**
+3）、` refresh(context);`**刷新刚才创建好的ioc容器；**代码如下:
 
 ```java
 public void refresh() throws BeansException, IllegalStateException {
@@ -3740,75 +3740,87 @@ public void refresh() throws BeansException, IllegalStateException {
 }
 ```
 
-4）、  onRefresh(); web的ioc容器重写了onRefresh方法
+4）、`onRefresh(); `web的IOC容器重写了`onRefresh`方法
 
-5）、webioc容器会创建嵌入式的Servlet容器；**createEmbeddedServletContainer**();
+5）、webIOC容器会创建嵌入式的Servlet容器；**createEmbeddedServletContainer**();
 
 **6）、获取嵌入式的Servlet容器工厂：**
 
+```java
+// 从ioc容器中获取EmbeddedServletContainerFactory 组件；
 EmbeddedServletContainerFactory containerFactory = getEmbeddedServletContainerFactory();
+```
 
-​	从ioc容器中获取EmbeddedServletContainerFactory 组件；**TomcatEmbeddedServletContainerFactory**创建对象，后置处理器一看是这个对象，就获取所有的定制器来先定制Servlet容器的相关配置；
+**TomcatEmbeddedServletContainerFactory**创建对象，后置处理器`BeanPostProcesser`一看是这个对象，就获取所有的定制器来先定制Servlet容器的相关配置；
 
-7）、**使用容器工厂获取嵌入式的Servlet容器**：this.embeddedServletContainer = containerFactory      .getEmbeddedServletContainer(getSelfInitializer());
+7）、**使用容器工厂获取嵌入式的Servlet容器**：
+
+```java
+this.embeddedServletContainer = containerFactory.getEmbeddedServletContainer(getSelfInitializer());
+```
 
 8）、嵌入式的Servlet容器创建对象并启动Servlet容器；
 
 **先启动嵌入式的Servlet容器，再将ioc容器中剩下没有创建出的对象获取出来；**
 
-**==IOC容器启动创建嵌入式的Servlet容器==**
-
-
+**IOC容器启动创建嵌入式的Servlet容器** 
 
 ### 9、使用外置的Servlet容器
 
-嵌入式Servlet容器：应用打成可执行的jar
+嵌入式Servlet容器：应用打成可执行的`jar`
 
-​		优点：简单、便携；
+* 优点：简单、便携；
 
-​		缺点：默认不支持JSP、优化定制比较复杂（使用定制器【ServerProperties、自定义EmbeddedServletContainerCustomizer】，自己编写嵌入式Servlet容器的创建工厂【EmbeddedServletContainerFactory】）；
+* 缺点：默认不支持JSP、优化定制比较复杂（使用定制器【`ServerProperties`、自定义`EmbeddedServletContainerCustomizer`】，自己编写嵌入式Servlet容器的创建工厂【`EmbeddedServletContainerFactory`】）；
 
+可以使用外置的Servlet容器：外面安装`Tomcat`---应用war包的方式打包；
 
-
-外置的Servlet容器：外面安装Tomcat---应用war包的方式打包；
-
-#### 步骤
+#### (1)、步骤
 
 1）、必须创建一个war项目；（利用idea创建好目录结构）
 
-2）、将嵌入式的Tomcat指定为provided；
+![](images/sb80_web47.png)
+
+![](images/sb81_web48.png)
+
+可以将应用打成`war`包，也可以将IDE整合外部服务器`tomcat`:
+
+![](images/sb82_web49.png)
+
+![](images/sb83_web50.png)
+
+![](images/sb84_web51.png)
+
+2）、将嵌入式的Tomcat指定为`provided`；
 
 ```xml
 <dependency>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-tomcat</artifactId>
-   <scope>provided</scope>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <scope>provided</scope>
 </dependency>
 ```
 
-3）、必须编写一个**SpringBootServletInitializer**的子类，并调用configure方法
+3）、必须编写一个**SpringBootServletInitializer**的子类，并调用`configure`方法
 
 ```java
 public class ServletInitializer extends SpringBootServletInitializer {
 
-   @Override
-   protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-       //传入SpringBoot应用的主程序
-      return application.sources(SpringBoot04WebJspApplication.class);
-   }
-
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        // 传入SpringBoot的主程序
+		return application.sources(SpringBoot04WebWithServletContainerExternalApplication.class);
+	}
 }
 ```
 
 4）、启动服务器就可以使用；
 
-#### 原理
+#### (2)、原理
 
-jar包：执行SpringBoot主类的main方法，启动ioc容器，创建嵌入式的Servlet容器；
+`jar`包：执行SpringBoot主类的main方法，启动IOC容器，创建嵌入式的Servlet容器；
 
-war包：启动服务器，**服务器启动SpringBoot应用**【SpringBootServletInitializer】，启动ioc容器；
-
-
+`war`包：启动服务器，**服务器启动SpringBoot应用**【SpringBootServletInitializer】，启动ioc容器；
 
 servlet3.0（Spring注解版）：
 
