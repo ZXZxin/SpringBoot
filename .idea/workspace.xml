@@ -7,40 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b50ef4a6-9f6f-41f0-a3c8-7c11e24ea0d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/springboot_04_web_withservletcontainer_external_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/springboot_04_web_withservletcontainer_external_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_11_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_20_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_22_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/springboot_04_web_withservletcontainer_external.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/controller/HelloController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/webapp/WEB-INF/success.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/webapp/hello.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringBootNotes.md" afterPath="$PROJECT_DIR$/SpringBootNotes.md" />
     </list>
@@ -73,21 +39,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServerProperties.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.9.RELEASE/spring-boot-autoconfigure-1.5.9.RELEASE.jar!/org/springframework/boot/autoconfigure/web/ServerProperties.class">
+      <file leaf-file-name="ServletInitializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/ServletInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="68" column="75" lean-forward="false" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="75" />
+            <state relative-caret-position="88">
+              <caret line="5" column="60" lean-forward="false" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServletInitializer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/ServletInitializer.java">
+      <file leaf-file-name="SpringBootServletInitializer.class" pinned="false" current-in-tab="true">
+        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot/1.5.20.BUILD-SNAPSHOT/spring-boot-1.5.20.BUILD-20190111.164806-2.jar!/org/springframework/boot/web/support/SpringBootServletInitializer.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="-418">
+              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebApplicationInitializer.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/WebApplicationInitializer.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -97,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/SpringBoot04WebWithServletContainerExternalApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -126,8 +102,8 @@
       <file leaf-file-name="HelloController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/controller/HelloController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="154">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,49 +111,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -388,57 +328,46 @@
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot_04_web_withservletcontainer_external" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zxin" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot_04_web_withservletcontainer_external" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot_04_web_withservletcontainer_external" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot_04_web_withservletcontainer_external" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBoot" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.1.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.1.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.1.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.1.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.1.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBoot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.1.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.1.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -966,7 +895,8 @@
       <workItem from="1549586265218" duration="7924000" />
       <workItem from="1549696103036" duration="5654000" />
       <workItem from="1549774346393" duration="4285000" />
-      <workItem from="1549779180438" duration="14865000" />
+      <workItem from="1549779180438" duration="16104000" />
+      <workItem from="1549848034976" duration="3225000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1548580697647</created>
@@ -1011,7 +941,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115844000" />
+    <option name="totallyTimeSpent" value="120308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
@@ -1019,35 +949,35 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15261473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15261473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15261473" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22838847" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1477152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32685715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3638344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1956" y="202" width="1884" height="500" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3638344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1956" y="202" width="1884" height="500" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58278865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17182498" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2470651" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32685715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1084,40 +1014,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/dao/DepartmentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/entities/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/component/LoginHandlerInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/component/MyLocaleResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/error/ErrorMvcAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,7 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,28 +1071,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1826">
           <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="26" column="21" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="21" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_witherrorhandle/src/main/resources/templates/error/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,7 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,7 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="71" column="5" lean-forward="false" selection-start-line="60" selection-start-column="3" selection-end-line="71" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,7 +1109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,10 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="e#138#139#0" expanded="false" />
-            <element signature="e#168#169#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,7 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="26" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="11" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,9 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,9 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,7 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,21 +1159,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_witherrorhandle/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="27" column="0" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
       </provider>
     </entry>
     <entry file="uml://MAVEN/com.zxin:springboot_04_web_withservletcontainer:0.0.1-SNAPSHOT">
@@ -1943,9 +1818,10 @@
               <point x="-83.0" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0851359167148642" x="445.17045091141665" y="685.1704509114167" />
+          <settings layout="Hierarchic Group" zoom="1.0851359167148642" x="445.0" y="685.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
@@ -1954,309 +1830,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
           <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#22810#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2238#2239#0" expanded="true" />
-            <element signature="e#2270#2271#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
-            <element signature="e#2343#2344#0" expanded="true" />
-            <element signature="e#2382#2383#0" expanded="true" />
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2468#2469#0" expanded="true" />
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2550#2551#0" expanded="true" />
-            <element signature="e#2595#2596#0" expanded="true" />
-            <element signature="e#2662#2663#0" expanded="true" />
-            <element signature="e#2720#2721#0" expanded="true" />
-            <element signature="e#2759#2760#0" expanded="true" />
-            <element signature="e#2799#2800#0" expanded="true" />
-            <element signature="e#2855#2856#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2949#2950#0" expanded="true" />
-            <element signature="e#2994#2995#0" expanded="true" />
-            <element signature="e#3062#3063#0" expanded="true" />
-            <element signature="e#3120#3121#0" expanded="true" />
-            <element signature="e#3166#3167#0" expanded="true" />
-            <element signature="e#3211#3212#0" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-            <element signature="e#3337#3338#0" expanded="true" />
-            <element signature="e#3378#3379#0" expanded="true" />
-            <element signature="e#3411#3412#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
-            <element signature="e#3469#3470#0" expanded="true" />
-            <element signature="e#3504#3505#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#3577#3578#0" expanded="true" />
-            <element signature="e#3616#3617#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3680#3681#0" expanded="true" />
-            <element signature="e#3732#3733#0" expanded="true" />
-            <element signature="e#3767#3768#0" expanded="true" />
-            <element signature="e#3817#3818#0" expanded="true" />
-            <element signature="e#3851#3852#0" expanded="true" />
-            <element signature="e#3899#3900#0" expanded="true" />
-            <element signature="e#3932#3933#0" expanded="true" />
-            <element signature="e#3986#3987#0" expanded="true" />
-            <element signature="e#4022#4023#0" expanded="true" />
-            <element signature="e#4522#4523#0" expanded="true" />
-            <element signature="e#4573#4574#0" expanded="true" />
-            <element signature="e#4641#4642#0" expanded="true" />
-            <element signature="e#4703#4704#0" expanded="true" />
-            <element signature="e#4746#4747#0" expanded="true" />
-            <element signature="e#4792#4793#0" expanded="true" />
-            <element signature="e#4850#4851#0" expanded="true" />
-            <element signature="e#4902#4903#0" expanded="true" />
-            <element signature="e#4943#4944#0" expanded="true" />
-            <element signature="e#4988#4989#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#5093#5094#0" expanded="true" />
-            <element signature="e#5138#5139#0" expanded="true" />
-            <element signature="e#5187#5188#0" expanded="true" />
-            <element signature="e#5250#5251#0" expanded="true" />
-            <element signature="e#5308#5309#0" expanded="true" />
-            <element signature="e#5353#5354#0" expanded="true" />
-            <element signature="e#5402#5403#0" expanded="true" />
-            <element signature="e#5465#5466#0" expanded="true" />
-            <element signature="e#5523#5524#0" expanded="true" />
-            <element signature="e#5569#5570#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#5687#5688#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5818#5819#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#6274#6275#0" expanded="true" />
-            <element signature="e#6325#6326#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#6434#6435#0" expanded="true" />
-            <element signature="e#6476#6477#0" expanded="true" />
-            <element signature="e#6527#6528#0" expanded="true" />
-            <element signature="e#6581#6582#0" expanded="true" />
-            <element signature="e#6635#6636#0" expanded="true" />
-            <element signature="e#6676#6677#0" expanded="true" />
-            <element signature="e#6726#6727#0" expanded="true" />
-            <element signature="e#6778#6779#0" expanded="true" />
-            <element signature="e#6830#6831#0" expanded="true" />
-            <element signature="e#6871#6872#0" expanded="true" />
-            <element signature="e#6921#6922#0" expanded="true" />
-            <element signature="e#6973#6974#0" expanded="true" />
-            <element signature="e#7025#7026#0" expanded="true" />
-            <element signature="e#7061#7062#0" expanded="true" />
-            <element signature="e#7108#7109#0" expanded="true" />
-            <element signature="e#7152#7153#0" expanded="true" />
-            <element signature="e#7198#7199#0" expanded="true" />
-            <element signature="e#7239#7240#0" expanded="true" />
-            <element signature="e#7289#7290#0" expanded="true" />
-            <element signature="e#7342#7343#0" expanded="true" />
-            <element signature="e#7394#7395#0" expanded="true" />
-            <element signature="e#7836#7837#0" expanded="true" />
-            <element signature="e#7881#7882#0" expanded="true" />
-            <element signature="e#7929#7930#0" expanded="true" />
-            <element signature="e#7980#7981#0" expanded="true" />
-            <element signature="e#8048#8049#0" expanded="true" />
-            <element signature="e#8110#8111#0" expanded="true" />
-            <element signature="e#8151#8152#0" expanded="true" />
-            <element signature="e#8196#8197#0" expanded="true" />
-            <element signature="e#8251#8252#0" expanded="true" />
-            <element signature="e#8301#8302#0" expanded="true" />
-            <element signature="e#8342#8343#0" expanded="true" />
-            <element signature="e#8387#8388#0" expanded="true" />
-            <element signature="e#8442#8443#0" expanded="true" />
-            <element signature="e#8492#8493#0" expanded="true" />
-            <element signature="e#9163#9164#0" expanded="true" />
-            <element signature="e#9214#9215#0" expanded="true" />
-            <element signature="e#9269#9270#0" expanded="true" />
-            <element signature="e#9323#9324#0" expanded="true" />
-            <element signature="e#9366#9367#0" expanded="true" />
-            <element signature="e#9418#9419#0" expanded="true" />
-            <element signature="e#9474#9475#0" expanded="true" />
-            <element signature="e#9530#9531#0" expanded="true" />
-            <element signature="e#9579#9580#0" expanded="true" />
-            <element signature="e#9637#9638#0" expanded="true" />
-            <element signature="e#9705#9706#0" expanded="true" />
-            <element signature="e#9773#9774#0" expanded="true" />
-            <element signature="e#9820#9821#0" expanded="true" />
-            <element signature="e#9879#9880#0" expanded="true" />
-            <element signature="e#9946#9947#0" expanded="true" />
-            <element signature="e#10016#10017#0" expanded="true" />
-            <element signature="e#10057#10058#0" expanded="true" />
-            <element signature="e#10107#10108#0" expanded="true" />
-            <element signature="e#10160#10161#0" expanded="true" />
-            <element signature="e#10212#10213#0" expanded="true" />
-            <element signature="e#10261#10262#0" expanded="true" />
-            <element signature="e#10319#10320#0" expanded="true" />
-            <element signature="e#10388#10389#0" expanded="true" />
-            <element signature="e#10456#10457#0" expanded="true" />
-            <element signature="e#10501#10502#0" expanded="true" />
-            <element signature="e#10555#10556#0" expanded="true" />
-            <element signature="e#10615#10616#0" expanded="true" />
-            <element signature="e#10675#10676#0" expanded="true" />
-            <element signature="e#10716#10717#0" expanded="true" />
-            <element signature="e#10766#10767#0" expanded="true" />
-            <element signature="e#10818#10819#0" expanded="true" />
-            <element signature="e#10870#10871#0" expanded="true" />
-            <element signature="e#10915#10916#0" expanded="true" />
-            <element signature="e#10967#10968#0" expanded="true" />
-            <element signature="e#11025#11026#0" expanded="true" />
-            <element signature="e#11081#11082#0" expanded="true" />
-            <element signature="e#11126#11127#0" expanded="true" />
-            <element signature="e#11180#11181#0" expanded="true" />
-            <element signature="e#11241#11242#0" expanded="true" />
-            <element signature="e#11301#11302#0" expanded="true" />
-            <element signature="e#11345#11346#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11457#11458#0" expanded="true" />
-            <element signature="e#11515#11516#0" expanded="true" />
-            <element signature="e#11560#11561#0" expanded="true" />
-            <element signature="e#11614#11615#0" expanded="true" />
-            <element signature="e#11675#11676#0" expanded="true" />
-            <element signature="e#11735#11736#0" expanded="true" />
-            <element signature="e#13497#13498#0" expanded="true" />
-            <element signature="e#13543#13544#0" expanded="true" />
-            <element signature="e#13596#13597#0" expanded="true" />
-            <element signature="e#13648#13649#0" expanded="true" />
-            <element signature="e#13691#13692#0" expanded="true" />
-            <element signature="e#13742#13743#0" expanded="true" />
-            <element signature="e#13805#13806#0" expanded="true" />
-            <element signature="e#13867#13868#0" expanded="true" />
-            <element signature="e#13915#13916#0" expanded="true" />
-            <element signature="e#13966#13967#0" expanded="true" />
-            <element signature="e#14034#14035#0" expanded="true" />
-            <element signature="e#14096#14097#0" expanded="true" />
-            <element signature="e#14163#14164#0" expanded="true" />
-            <element signature="e#14208#14209#0" expanded="true" />
-            <element signature="e#14265#14266#0" expanded="true" />
-            <element signature="e#14325#14326#0" expanded="true" />
-            <element signature="e#14527#14528#0" expanded="true" />
-            <element signature="e#14570#14571#0" expanded="true" />
-            <element signature="e#14618#14619#0" expanded="true" />
-            <element signature="e#14664#14665#0" expanded="true" />
-            <element signature="e#14710#14711#0" expanded="true" />
-            <element signature="e#14761#14762#0" expanded="true" />
-            <element signature="e#14827#14828#0" expanded="true" />
-            <element signature="e#14889#14890#0" expanded="true" />
-            <element signature="e#14934#14935#0" expanded="true" />
-            <element signature="e#14984#14985#0" expanded="true" />
-            <element signature="e#15048#15049#0" expanded="true" />
-            <element signature="e#15108#15109#0" expanded="true" />
-            <element signature="e#15163#15164#0" expanded="true" />
-            <element signature="e#15223#15224#0" expanded="true" />
-            <element signature="e#15428#15429#0" expanded="true" />
-            <element signature="e#15474#15475#0" expanded="true" />
-            <element signature="e#15530#15531#0" expanded="true" />
-            <element signature="e#15582#15583#0" expanded="true" />
-            <element signature="e#15633#15634#0" expanded="true" />
-            <element signature="e#15688#15689#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-            <element signature="e#15941#15942#0" expanded="true" />
-            <element signature="e#16135#16136#0" expanded="true" />
-            <element signature="e#16185#16186#0" expanded="true" />
-            <element signature="e#16249#16250#0" expanded="true" />
-            <element signature="e#16309#16310#0" expanded="true" />
-            <element signature="e#16352#16353#0" expanded="true" />
-            <element signature="e#16399#16400#0" expanded="true" />
-            <element signature="e#16458#16459#0" expanded="true" />
-            <element signature="e#16512#16513#0" expanded="true" />
-            <element signature="e#16554#16555#0" expanded="true" />
-            <element signature="e#16604#16605#0" expanded="true" />
-            <element signature="e#16665#16666#0" expanded="true" />
-            <element signature="e#16725#16726#0" expanded="true" />
-            <element signature="e#16930#16931#0" expanded="true" />
-            <element signature="e#16983#16984#0" expanded="true" />
-            <element signature="e#17102#17103#0" expanded="true" />
-            <element signature="e#17168#17169#0" expanded="true" />
-            <element signature="e#17215#17216#0" expanded="true" />
-            <element signature="e#17265#17266#0" expanded="true" />
-            <element signature="e#17331#17332#0" expanded="true" />
-            <element signature="e#17391#17392#0" expanded="true" />
-            <element signature="e#17430#17431#0" expanded="true" />
-            <element signature="e#17477#17478#0" expanded="true" />
-            <element signature="e#17532#17533#0" expanded="true" />
-            <element signature="e#17586#17587#0" expanded="true" />
-            <element signature="e#17648#17649#0" expanded="true" />
-            <element signature="e#17709#17710#0" expanded="true" />
-            <element signature="e#17948#17949#0" expanded="true" />
-            <element signature="e#17992#17993#0" expanded="true" />
-            <element signature="e#18214#18215#0" expanded="true" />
-            <element signature="e#18270#18271#0" expanded="true" />
-            <element signature="e#18335#18336#0" expanded="true" />
-            <element signature="e#18399#18400#0" expanded="true" />
-            <element signature="e#18444#18445#0" expanded="true" />
-            <element signature="e#18496#18497#0" expanded="true" />
-            <element signature="e#18554#18555#0" expanded="true" />
-            <element signature="e#18610#18611#0" expanded="true" />
-            <element signature="e#19247#19248#0" expanded="true" />
-            <element signature="e#19298#19299#0" expanded="true" />
-            <element signature="e#19353#19354#0" expanded="true" />
-            <element signature="e#19407#19408#0" expanded="true" />
-            <element signature="e#19449#19450#0" expanded="true" />
-            <element signature="e#19500#19501#0" expanded="true" />
-            <element signature="e#19554#19555#0" expanded="true" />
-            <element signature="e#19608#19609#0" expanded="true" />
-            <element signature="e#19652#19653#0" expanded="true" />
-            <element signature="e#19705#19706#0" expanded="true" />
-            <element signature="e#19763#19764#0" expanded="true" />
-            <element signature="e#19821#19822#0" expanded="true" />
-            <element signature="e#19862#19863#0" expanded="true" />
-            <element signature="e#19912#19913#0" expanded="true" />
-            <element signature="e#19964#19965#0" expanded="true" />
-            <element signature="e#20016#20017#0" expanded="true" />
-            <element signature="e#20057#20058#0" expanded="true" />
-            <element signature="e#20107#20108#0" expanded="true" />
-            <element signature="e#20159#20160#0" expanded="true" />
-            <element signature="e#20211#20212#0" expanded="true" />
-            <element signature="e#20252#20253#0" expanded="true" />
-            <element signature="e#20302#20303#0" expanded="true" />
-            <element signature="e#20355#20356#0" expanded="true" />
-            <element signature="e#20407#20408#0" expanded="true" />
-            <element signature="e#20456#20457#0" expanded="true" />
-            <element signature="e#20514#20515#0" expanded="true" />
-            <element signature="e#20583#20584#0" expanded="true" />
-            <element signature="e#20651#20652#0" expanded="true" />
-            <element signature="e#20700#20701#0" expanded="true" />
-            <element signature="e#20758#20759#0" expanded="true" />
-            <element signature="e#20826#20827#0" expanded="true" />
-            <element signature="e#20894#20895#0" expanded="true" />
-            <element signature="e#20953#20954#0" expanded="true" />
-            <element signature="e#21021#21022#0" expanded="true" />
-            <element signature="e#21241#21242#0" expanded="true" />
-            <element signature="e#21293#21294#0" expanded="true" />
-            <element signature="e#21350#21351#0" expanded="true" />
-            <element signature="e#21406#21407#0" expanded="true" />
-            <element signature="e#21885#21886#0" expanded="true" />
-            <element signature="e#21932#21933#0" expanded="true" />
-            <element signature="e#21990#21991#0" expanded="true" />
-            <element signature="e#22067#22068#0" expanded="true" />
-            <element signature="e#22342#22343#0" expanded="true" />
-            <element signature="e#22400#22401#0" expanded="true" />
-            <element signature="e#22469#22470#0" expanded="true" />
-            <element signature="e#22534#22535#0" expanded="true" />
-            <element signature="e#22595#22596#0" expanded="true" />
-            <element signature="e#22648#22649#0" expanded="true" />
-            <element signature="e#22679#22680#0" expanded="true" />
-            <element signature="e#22718#22719#0" expanded="true" />
-            <element signature="e#22757#22758#0" expanded="true" />
-            <element signature="e#22800#22801#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_restfulcrud/src/main/java/com/zxin/springboot/config/MyMvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-208">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2272,9 +1862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2282,9 +1869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2300,13 +1884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#287#288#0" expanded="false" />
-            <element signature="e#354#355#0" expanded="false" />
-            <element signature="e#429#430#0" expanded="false" />
-            <element signature="e#496#497#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2314,11 +1891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2326,11 +1898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1172#1173#0" expanded="false" />
-            <element signature="e#1225#1226#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2338,7 +1905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="79" column="38" lean-forward="false" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2346,7 +1912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2354,7 +1919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2371,284 +1935,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-330">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1549798406537" expanded="true" signature="2154:2492" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="2188:2267" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="2282:2481" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="2745:2896" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="2911:3072" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="2928:3056" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="3121:3185" ph="/**...*/" />
-              <marker date="1549798406537" expanded="true" signature="3294:3396" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="3484:3527" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="3553:3563" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="3590:3596" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="3752:3964" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="3769:3953" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="3789:3934" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="4099:4250" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="4279:4483" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="4641:4756" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="5106:5207" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="5409:5762" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="5964:6054" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="6158:6244" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="6291:6344" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="6527:6601" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="8446:8625" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="8627:8697" ph="//..." />
-              <marker date="1549798406537" expanded="true" signature="8806:8864" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="8890:8900" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="8933:8939" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="9348:9369" ph="server: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="9365:9369" ph="8081" />
-              <marker date="1549798406537" expanded="true" signature="9402:9431" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="9903:9942" ph="friends: &lt;2 keys&gt;" />
-              <marker date="1549798406537" expanded="true" signature="9924:9932" ph="zhangsan" />
-              <marker date="1549798406537" expanded="true" signature="9940:9942" ph="20" />
-              <marker date="1549798406537" expanded="true" signature="9964:10002" ph="friends: {2 keys}" />
-              <marker date="1549798406537" expanded="true" signature="9984:9992" ph="zhangsan" />
-              <marker date="1549798406537" expanded="true" signature="9998:10000" ph="18" />
-              <marker date="1549798406537" expanded="true" signature="10064:10083" ph="‐ cat ‐ dog ‐ pig" />
-              <marker date="1549798406537" expanded="true" signature="10101:10120" ph="pets: [3 items]" />
-              <marker date="1549798406537" expanded="true" signature="10108:10111" ph="cat" />
-              <marker date="1549798406537" expanded="true" signature="10112:10115" ph="dog" />
-              <marker date="1549798406537" expanded="true" signature="10116:10119" ph="pig" />
-              <marker date="1549798406537" expanded="true" signature="10188:10486" ph="/**...*/" />
-              <marker date="1549798406537" expanded="true" signature="10487:10553" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="10808:10828" ph="server: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="10824:10828" ph="8081" />
-              <marker date="1549798406537" expanded="true" signature="10830:10994" ph="person: &lt;7 keys&gt;" />
-              <marker date="1549798406537" expanded="true" signature="10850:10858" ph="zhangsan" />
-              <marker date="1549798406537" expanded="true" signature="10866:10868" ph="18" />
-              <marker date="1549798406537" expanded="true" signature="10877:10882" ph="false" />
-              <marker date="1549798406537" expanded="true" signature="10892:10902" ph="2018/01/02" />
-              <marker date="1549798406537" expanded="true" signature="10905:10930" ph="maps: {2 keys}" />
-              <marker date="1549798406537" expanded="true" signature="10917:10919" ph="v1" />
-              <marker date="1549798406537" expanded="true" signature="10926:10929" ph="100" />
-              <marker date="1549798406537" expanded="true" signature="10933:10963" ph="lists: &lt;2 items&gt;" />
-              <marker date="1549798406537" expanded="true" signature="10946:10950" ph="lisi" />
-              <marker date="1549798406537" expanded="true" signature="10957:10963" ph="wangwu" />
-              <marker date="1549798406537" expanded="true" signature="10966:10994" ph="dog: &lt;2 keys&gt;" />
-              <marker date="1549798406537" expanded="true" signature="10981:10983" ph="小狗" />
-              <marker date="1549798406537" expanded="true" signature="11075:11232" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="12523:12646" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="13210:13584" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="13563:13575" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="13703:13794" ph="/**...*/" />
-              <marker date="1549798406537" expanded="true" signature="13926:14020" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="14042:14086" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="14168:14202" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="14262:14267" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="14294:14297" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="14392:14471" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="15174:15194" ph="server: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15174:15241" ph="---" />
-              <marker date="1549798406537" expanded="true" signature="15190:15194" ph="8080" />
-              <marker date="1549798406537" expanded="true" signature="15195:15241" ph="spring: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15215:15241" ph="profiles: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15237:15241" ph="prod" />
-              <marker date="1549798406537" expanded="true" signature="15243:15291" ph="---" />
-              <marker date="1549798406537" expanded="true" signature="15247:15267" ph="server: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15263:15267" ph="8081" />
-              <marker date="1549798406537" expanded="true" signature="15268:15291" ph="spring: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15288:15291" ph="dev" />
-              <marker date="1549798406537" expanded="true" signature="15294:15344" ph="---" />
-              <marker date="1549798406537" expanded="true" signature="15299:15319" ph="server: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15315:15319" ph="8082" />
-              <marker date="1549798406537" expanded="true" signature="15320:15344" ph="spring: &lt;1 key&gt;" />
-              <marker date="1549798406537" expanded="true" signature="15340:15344" ph="prod" />
-              <marker date="1549798406537" expanded="false" signature="17234:17352" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="17456:17466" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="17481:17487" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="27712:28274" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="28638:28643" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="28672:28675" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="28683:28786" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="28859:29168" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="34091:34202" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="34295:34414" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="35717:35724" ph="{}" />
-              <marker date="1549798406537" expanded="true" signature="35889:36163" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="35990:36149" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="36010:36131" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="36331:36375" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="36525:36850" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="36529:36627" ph="//..." />
-              <marker date="1549798406537" expanded="true" signature="38450:38566" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="38680:38871" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="38940:42192" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="39230:39854" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="39244:39392" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="39456:39838" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="39495:39638" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="39678:39820" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="40002:41416" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="40091:40221" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="40306:41171" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="40324:40438" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="40550:40710" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="40771:40930" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="41043:41146" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="41263:41400" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="41427:41711" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="41918:42053" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="42079:42175" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="42428:42806" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="42540:42792" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="42556:42660" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="42676:42776" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="42820:42906" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="43008:43765" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="43025:43393" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="43155:43375" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="43199:43353" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="43431:43561" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="43593:43749" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="46144:46260" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="46643:46735" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="47206:47413" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="48446:48556" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="48802:48813" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="48858:48864" ph=" }" />
-              <marker date="1549798406537" expanded="false" signature="48930:48941" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="48978:48984" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="49055:49339" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="49413:49606" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="49661:50233" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="50579:50864" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="50880:51069" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="50920:51053" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="52181:52399" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="52188:52248" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="52255:52391" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="54463:54506" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="54532:54542" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="54557:54563" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="54647:54822" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="54965:55431" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="54972:55032" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="55039:55423" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="55348:55415" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="58104:58228" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="58126:58208" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="58574:58730" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="58583:58656" ph="//..." />
-              <marker date="1549798406537" expanded="true" signature="59094:59211" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="59720:60196" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="59858:60168" ph="//..." />
-              <marker date="1549798406537" expanded="true" signature="60513:60569" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="60707:60782" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="61218:61655" ph="@{...}" />
-              <marker date="1549798406537" expanded="false" signature="62362:62372" ph=" { " />
-              <marker date="1549798406537" expanded="false" signature="62412:62418" ph=" }" />
-              <marker date="1549798406537" expanded="true" signature="62592:62733" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="63241:63558" ph="/**...*/" />
-              <marker date="1549798406537" expanded="true" signature="63698:64328" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="64549:66222" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="64557:65130" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="65159:66213" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="65212:66203" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="65849:65967" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="65861:65957" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="67051:67074" ph="/**...*/" />
-              <marker date="1549798406537" expanded="true" signature="67221:67534" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="67691:67699" ph="{}" />
-              <marker date="1549798406537" expanded="true" signature="68125:69465" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="68219:69456" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="68511:68521" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="69030:69148" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="69042:69138" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="69502:69512" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="70029:70254" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="70483:70498" ph="/**...*/" />
-              <marker date="1549798406537" expanded="true" signature="70718:71086" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="71256:71264" ph="{}" />
-              <marker date="1549798406537" expanded="true" signature="71426:71434" ph="{}" />
-              <marker date="1549798406537" expanded="true" signature="73103:73154" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="73105:73111" ph="©" />
-              <marker date="1549798406537" expanded="true" signature="73526:73580" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="73528:73534" ph="©" />
-              <marker date="1549798406537" expanded="true" signature="73725:73807" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="73738:73800" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="73744:73750" ph="©" />
-              <marker date="1549798406537" expanded="true" signature="73827:73881" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="73829:73835" ph="©" />
-              <marker date="1549798406537" expanded="true" signature="73901:73952" ph="..." />
-              <marker date="1549798406537" expanded="false" signature="73903:73909" ph="©" />
-              <marker date="1549798406537" expanded="true" signature="74400:75011" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="74433:74506" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="74777:74937" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="75042:75700" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="75096:75694" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="75415:75670" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="75858:76295" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="75880:76295" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76169:76295" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76188:76295" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76359:77523" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76408:77516" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76424:76695" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76441:76678" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76712:77502" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="76751:77485" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="77210:77467" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78059:79528" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78137:79519" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78170:78297" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78330:78463" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78496:78988" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78590:78754" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="78809:78973" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="79021:79282" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="79101:79267" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="79315:79441" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="79869:81815" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="79904:80017" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="80201:80372" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="80401:80576" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="80605:81141" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="80691:80885" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="80936:81130" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="81170:81486" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="81288:81475" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="81515:81712" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="81976:82256" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="82532:83022" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="82823:83016" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="83032:83205" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="83070:83194" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="83552:83712" ph="{&quot;timestamp&quot;: &quot;2019-02-10T05:04:15.852+0000&quot;...}" />
-              <marker date="1549798406537" expanded="true" signature="84408:84480" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="84720:85175" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="85178:85208" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="85316:85533" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="88446:88510" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="88570:88735" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="90563:90940" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="91901:91975" ph="/.../" />
-              <marker date="1549798406537" expanded="true" signature="94436:94588" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="94649:94946" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="94764:94932" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="94782:94915" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="94982:95097" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="95149:95446" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="95264:95432" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="95282:95415" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="95482:95600" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="95708:95842" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="96091:96286" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="96406:96566" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="96503:96563" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="96569:96782" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="96818:96975" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="96913:96972" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="96978:97180" ph="@{...}" />
-              <marker date="1549798406537" expanded="true" signature="97219:97385" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="97320:97382" ph="{...}" />
-              <marker date="1549798406537" expanded="true" signature="104451:104490" ph="..." />
-              <marker date="1549798406537" expanded="true" signature="104738:104843" ph="{...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -2659,9 +1945,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1548743220100" expanded="true" signature="207:358" ph="..." />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -2676,31 +1959,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="704">
           <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -2724,25 +2007,57 @@
     <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/SpringBoot04WebWithServletContainerExternalApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/controller/HelloController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/WebApplicationInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/src/main/java/com/zxin/springboot/ServletInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+          <caret line="5" column="60" lean-forward="false" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/SpringServletContainerInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/META-INF/services/javax.servlet.ServletContainerInitializer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot/1.5.20.BUILD-SNAPSHOT/spring-boot-1.5.20.BUILD-20190111.164806-2.jar!/org/springframework/boot/web/support/SpringBootServletInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
           <folding />
         </state>
       </provider>

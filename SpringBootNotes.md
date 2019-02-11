@@ -3818,41 +3818,44 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 #### (2)、原理
 
-`jar`包：执行SpringBoot主类的main方法，启动IOC容器，创建嵌入式的Servlet容器；
+两种方式的不同原理: 
 
-`war`包：启动服务器，**服务器启动SpringBoot应用**【SpringBootServletInitializer】，启动ioc容器；
+* `jar`包：执行SpringBoot主类的main方法，启动IOC容器，创建嵌入式的Servlet容器；
+* `war`包：启动服务器，**服务器启动SpringBoot应用**【`SpringBootServletInitializer`】，启动IOC容器；
 
-servlet3.0（Spring注解版）：
-
-8.2.4 Shared libraries / runtimes pluggability：
+servlet3.0（Spring注解版）：章节: 8.2.4 Shared libraries / runtimes pluggability；
 
 规则：
 
-​	1）、服务器启动（web应用启动）会创建当前web应用里面每一个jar包里面ServletContainerInitializer实例：
+​	1）、服务器启动（web应用启动）会创建当前web应用里面每一个jar包里面`ServletContainerInitializer`实例：
 
-​	2）、ServletContainerInitializer的实现放在jar包的META-INF/services文件夹下，有一个名为javax.servlet.ServletContainerInitializer的文件，内容就是ServletContainerInitializer的实现类的全类名
+​	2）、`ServletContainerInitializer`的实现放在jar包的`META-INF/services`文件夹下，有一个名为`javax.servlet.ServletContainerInitializer`的文件，内容就是`ServletContainerInitializer`的实现类的全类名
 
-​	3）、还可以使用@HandlesTypes，在应用启动的时候加载我们感兴趣的类；
+​	3）、还可以使用`@HandlesTypes`，在应用启动的时候加载我们感兴趣的类；
 
 
 
 流程：
 
-1）、启动Tomcat
+1）、启动Tomcat；
 
-2）、org\springframework\spring-web\4.3.14.RELEASE\spring-web-4.3.14.RELEASE.jar!\META-INF\services\javax.servlet.ServletContainerInitializer：
+2）、`org\springframework\spring-web\4.3.14.RELEASE\spring-web-4.3.14.RELEASE.jar!\META-INF\services\javax.servlet.ServletContainerInitializer`：
 
 Spring的web模块里面有这个文件：**org.springframework.web.SpringServletContainerInitializer**
 
-3）、SpringServletContainerInitializer将@HandlesTypes(WebApplicationInitializer.class)标注的所有这个类型的类都传入到onStartup方法的Set<Class<?>>；为这些WebApplicationInitializer类型的类创建实例；
+![](images/sb85_web52.png)
 
-4）、每一个WebApplicationInitializer都调用自己的onStartup；
+3）、`SpringServletContainerInitializer`将`@HandlesTypes(WebApplicationInitializer.class)`标注的所有这个类型的类都传入到`onStartup`方法的`Set<Class<?>>`；为这些`WebApplicationInitializer`类型的类创建实例；
 
-![](images/搜狗截图20180302221835.png)
+4）、每一个`WebApplicationInitializer`都调用自己的onStartup；
 
-5）、相当于我们的SpringBootServletInitializer的类会被创建对象，并执行onStartup方法
+![](images/sb86_web53.png)
 
-6）、SpringBootServletInitializer实例执行onStartup的时候会createRootApplicationContext；创建容器
+5）、相当于我们的`SpringBootServletInitializer`的类会被创建对象，并执行onStartup方法；
+
+6）、`SpringBootServletInitializer`实例执行onStartup的时候会`createRootApplicationContext`；创建容器
+
+下面是`SpringBootServletInitializer`的`createRootApplicationContext`方法: 
 
 ```java
 protected WebApplicationContext createRootApplicationContext(
@@ -3895,7 +3898,7 @@ protected WebApplicationContext createRootApplicationContext(
 }
 ```
 
-7）、Spring的应用就启动并且创建IOC容器
+7）、Spring的应用就启动并且创建IOC容器(`run`方法)
 
 ```java
 public ConfigurableApplicationContext run(String... args) {
@@ -3935,5 +3938,232 @@ public ConfigurableApplicationContext run(String... args) {
 }
 ```
 
-**启动Servlet容器，再启动SpringBoot应用**
+**即先启动Servlet容器，再启动SpringBoot应用**
 
+***
+
+## 五、Docker
+
+### 1、简介
+**Docker**是一个开源的应用容器引擎；是一个轻量级容器技术；
+
+Docker**支持将软件编译成一个镜像**；然后在镜像中各种软件做好配置，将镜像发布出去，其他使用者可以直接使用这个镜像；
+
+**运行中的这个镜像称为容器，容器启动是非常快速的。**
+
+> Docker的思想和虚拟机类似，但是实际还是有区别的。
+
+![](images/sb87_dk1.png)
+
+
+
+### 2、核心概念
+
+* docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）；
+* docker客户端(Client)：连接docker主机进行操作；
+* docker仓库(Registry)：用来保存各种打包好的软件镜像；
+* docker镜像(Images)：**软件打包好的镜像，放在docker仓库中**；
+* docker容器(Container)：**镜像启动后的实例称为一个容器；容器是独立运行的一个或一组应用；**
+
+![](images/sb88_dk2.png)
+
+使用Docker的步骤：
+
+1）、安装Docker
+
+2）、**去Docker仓库找到这个软件对应的镜像；**
+
+3）、**使用Docker运行这个镜像，这个镜像就会生成一个Docker容器；**
+
+4）、对容器的启动停止就是对软件的启动停止；
+
+### 3、安装Docker
+
+#### 1）、安装linux虚拟机
+
+​	1）、VMWare、VirtualBox（安装）；
+
+​	2）、导入虚拟机文件`centos7.ova`文件；
+
+​	3）、双击启动linux虚拟机；使用  `root/ 123456`登陆；
+
+​	4）、使用客户端(`smarTTy`或者`xshell`)连接linux服务器进行命令操作；
+
+​	5）、设置虚拟机网络；
+
+​		 桥接网络===选好网卡===接入网线；
+
+​	6）、设置好网络以后使用命令重启虚拟机的网络
+
+```shell
+service network restart
+```
+
+​	7）、查看linux的`ip`地址
+
+```shell
+ip addr
+```
+
+​	8）、使用客户端连接linux；
+
+#### 2）、在linux虚拟机上安装docker
+
+几个关键命令:
+
+* `systemctl start docker`，启动；
+* `systemctl stop docker`，停止；
+
+```shell
+1、检查内核版本，必须是3.10及以上
+uname -r
+2、安装docker
+yum install docker
+3、输入y确认安装
+4、启动docker
+[root@localhost ~]# systemctl start docker
+[root@localhost ~]# docker -v
+Docker version 1.12.6, build 3e8e77d/1.12.6
+5、开机启动docker
+[root@localhost ~]# systemctl enable docker
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
+6、停止docker
+systemctl stop docker
+```
+
+>  具体安装教程网络上有，我的是`Deepin`环境，找到一篇不错的教程:
+>
+> https://blog.csdn.net/qq_36148847/article/details/79273591
+
+![](images/sb89_dk3.png)
+
+### 4、Docker常用命令&操作
+
+#### 1）、镜像操作
+
+| 操作 | 命令                                            | 说明                                                     |
+| ---- | ----------------------------------------------- | -------------------------------------------------------- |
+| 检索 | docker  search 关键字  eg：docker  search redis | 我们经常去docker  hub上检索镜像的详细信息，如镜像的TAG。 |
+| 拉取 | docker pull 镜像名:tag                          | :tag是可选的，tag表示标签，多为软件的版本，默认是latest  |
+| 列表 | docker images                                   | 查看所有本地镜像                                         |
+| 删除 | docker rmi image-id                             | 删除指定的本地镜像                                       |
+
+官方仓库: https://hub.docker.com/
+
+#### 2）、容器操作
+
+软件镜像（QQ安装程序）----运行镜像----产生一个容器（正在运行的软件，运行的QQ）；
+
+步骤：
+
+````shell
+1、搜索镜像
+[root@localhost ~]# docker search tomcat
+2、拉取镜像
+[root@localhost ~]# docker pull tomcat
+3、根据镜像启动容器
+docker run --name mytomcat -d tomcat:latest
+4、docker ps  
+查看运行中的容器
+5、 停止运行中的容器
+docker stop  容器的id
+6、查看所有的容器
+docker ps -a
+7、启动容器
+docker start 容器id
+8、删除一个容器
+ docker rm 容器id
+9、启动一个做了端口映射的tomcat
+[root@localhost ~]# docker run -d -p 8888:8080 tomcat
+-d：后台运行
+-p: 将主机的端口映射到容器的一个端口    主机端口:容器内部的端口
+
+10、为了演示简单关闭了linux的防火墙
+service firewalld status ；查看防火墙状态
+service firewalld stop：关闭防火墙
+11、查看容器的日志
+docker logs container-name/container-id
+
+更多命令参看
+https://docs.docker.com/engine/reference/commandline/docker/
+可以参考每一个镜像的文档
+````
+
+
+
+| 操作     | 命令                                                         | 说明                                                         |
+| -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 运行     | `docker run --name container-name -d image-name`<br />`eg:docker run –name myredis –d redis` | `--name`：自定义容器名<br />`-d`：后台运行<br/>`image-name` : 指定镜像模板 |
+| 列表     | `docker ps`（查看运行中的容器）；                            | 加上`-a`；可以查看所有容器                                   |
+| 停止     | `docker stop container-name/container-id`                    | 停止当前你运行的容器                                         |
+| 启动     | `docker start container-name/container-id`                   | 启动容器                                                     |
+| 删除     | `docker rm container-id`                                     | 删除指定容器                                                 |
+| 端口映射 | `-p 6379:6379`<br>`eg:docker run -d -p 6379:6379 --name myredis docker.io/redis` | `-p`: 主机端口(映射到)容器内部的端口                         |
+| 容器日志 | docker logs container-name/container-id                      |                                                              |
+
+更多命令: https://docs.docker.com/engine/reference/commandline/docker/
+
+
+
+#### 3）、安装MySQL示例
+
+```shell
+docker pull mysql
+```
+
+
+
+错误的启动
+
+```shell
+[root@localhost ~]# docker run --name mysql01 -d mysql
+42f09819908bb72dd99ae19e792e0a5d03c48638421fa64cce5f8ba0f40f5846
+
+mysql退出了
+[root@localhost ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                           PORTS               NAMES
+42f09819908b        mysql               "docker-entrypoint.sh"   34 seconds ago      Exited (1) 33 seconds ago                            mysql01
+538bde63e500        tomcat              "catalina.sh run"        About an hour ago   Exited (143) About an hour ago                       compassionate_
+goldstine
+c4f1ac60b3fc        tomcat              "catalina.sh run"        About an hour ago   Exited (143) About an hour ago                       lonely_fermi
+81ec743a5271        tomcat              "catalina.sh run"        About an hour ago   Exited (143) About an hour ago                       sick_ramanujan
+
+
+//错误日志
+[root@localhost ~]# docker logs 42f09819908b
+error: database is uninitialized and password option is not specified 
+  You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD；这个三个参数必须指定一个
+```
+
+正确的启动
+
+```shell
+[root@localhost ~]# docker run --name mysql01 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+b874c56bec49fb43024b3805ab51e9097da779f2f572c22c695305dedd684c5f
+[root@localhost ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+b874c56bec49        mysql               "docker-entrypoint.sh"   4 seconds ago       Up 3 seconds        3306/tcp            mysql01
+```
+
+做了端口映射
+
+```shell
+[root@localhost ~]# docker run -p 3306:3306 --name mysql02 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+ad10e4bc5c6a0f61cbad43898de71d366117d120e39db651844c0e73863b9434
+[root@localhost ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+ad10e4bc5c6a        mysql               "docker-entrypoint.sh"   4 seconds ago       Up 2 seconds        0.0.0.0:3306->3306/tcp   mysql02
+```
+
+
+
+几个其他的高级操作
+
+```
+docker run --name mysql03 -v /conf/mysql:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+把主机的/conf/mysql文件夹挂载到 mysqldocker容器的/etc/mysql/conf.d文件夹里面
+改mysql的配置文件就只需要把mysql配置文件放在自定义的文件夹下（/conf/mysql）
+
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+指定mysql的一些配置参数
+```
