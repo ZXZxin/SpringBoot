@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_06_data_druid/springboot_06_data_druid.iml" filepath="$PROJECT_DIR$/springboot_06_data_druid/springboot_06_data_druid.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_06_data_jdbc/springboot_06_data_jdbc.iml" filepath="$PROJECT_DIR$/springboot_06_data_jdbc/springboot_06_data_jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_06_data_mybatis/springboot_06_data_mybatis.iml" filepath="$PROJECT_DIR$/springboot_06_data_mybatis/springboot_06_data_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_06_data_mybatis_2/springboot_06_data_mybatis_2.iml" filepath="$PROJECT_DIR$/springboot_06_data_mybatis_2/springboot_06_data_mybatis_2.iml" />
     </modules>
   </component>
 </project>

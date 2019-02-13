@@ -4428,6 +4428,8 @@ public class DruidConfig {
 
 #### 1)、注解版
 
+> 项目: springboot_06_data_mybatis
+
 只需要编写Mapper即可。
 
 ```java
@@ -4505,6 +4507,74 @@ public class MyBatisConfig {
 ```
 
 #### 2)、配置文件版
+
+`EmployeeMapper.xml`配置:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxin.springboot.mapper.EmployeeMapper">
+
+    <!--public Employee getEmpById(Integer id);-->
+
+    <!--public void insertEmp(Employee employee);-->
+
+    <select id="getEmpById" resultType="com.zxin.springboot.bean.Employee">
+        SELECT * FROM employee WHERE id=#{id}
+    </select>
+
+    <insert id="insertEmp">
+        INSERT INTO employee(lastName, email, gender, d_id) VALUES (#{lastName},#{email},#{gender},#{dId})
+    </insert>
+
+</mapper>
+```
+
+`mybatis-config`主配置文件:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+</configuration>
+```
+
+`application.yml`配置:
+
+```yaml
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.zxin.springboot.beans
+```
+
+编写`Controller`测试:
+
+```java
+@RestController
+public class EmpController {
+
+    @Autowired
+    EmployeeMapper employeeMapper;
+
+    @GetMapping("/emp/{id}")
+    public Employee getEmp(@PathVariable("id") Integer id){
+        return employeeMapper.getEmpById(id);
+    }
+}
+```
+
+测试结果:
+
+![](images/sb97_data8.png)
 
 ### 4、整合SprintData JPA
 
