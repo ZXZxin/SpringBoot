@@ -48,6 +48,7 @@
   - [2、整合Druid数据源](#2整合druid数据源)
   - [3、整合Mybatis](#3整合mybatis)
   - [4、整合SpringData JPA](#4整合springdata-jpa)
+- [七、启动配置原理](#七启动配置原理)
 
 <!-- /TOC -->
 
@@ -4667,3 +4668,8 @@ public class UserController {
 测试结果:
 
 ![](images/sb99_data10.png)
+
+***
+
+## 七、启动配置原理
+
