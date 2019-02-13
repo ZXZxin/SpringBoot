@@ -21,6 +21,9 @@
         <module name="springboot_04_web_witherrorhandle" />
         <module name="springboot_04_web_withservletcontainer" />
         <module name="springboot_04_web_withservletcontainer_external" />
+        <module name="springboot_06_data_druid" />
+        <module name="springboot_06_data_jdbc" />
+        <module name="springboot_06_data_mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -43,6 +46,9 @@
       <module name="springboot_04_web_witherrorhandle" target="1.8" />
       <module name="springboot_04_web_withservletcontainer" target="1.8" />
       <module name="springboot_04_web_withservletcontainer_external" target="1.8" />
+      <module name="springboot_06_data_druid" target="1.8" />
+      <module name="springboot_06_data_jdbc" target="1.8" />
+      <module name="springboot_06_data_mybatis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -14,9 +14,13 @@
     <file url="file://$PROJECT_DIR$/springboot_04_web_primary" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_primary2_thymeleaf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_restfulcrud" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot_04_web_servletcontainer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_witherrorhandle" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_04_web_withservletcontainer_external" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_06_data_druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_06_data_jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_06_data_jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_06_data_jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_06_data_mybatis" charset="UTF-8" />
   </component>
 </project>

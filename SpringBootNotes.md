@@ -4078,28 +4078,26 @@ docker start 容器id
 -d：后台运行
 -p: 将主机的端口映射到容器的一个端口    主机端口:容器内部的端口
 
-10、为了演示简单关闭了linux的防火墙
+10、注意有时候需要关闭防火墙， s为了演示简单关闭了linux的防火墙
 service firewalld status ；查看防火墙状态
 service firewalld stop：关闭防火墙
 11、查看容器的日志
 docker logs container-name/container-id
-
-更多命令参看
-https://docs.docker.com/engine/reference/commandline/docker/
-可以参考每一个镜像的文档
 ````
 
 
 
 | 操作     | 命令                                                         | 说明                                                         |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 运行     | `docker run --name container-name -d image-name`<br />`eg:docker run –name myredis –d redis` | `--name`：自定义容器名<br />`-d`：后台运行<br/>`image-name` : 指定镜像模板 |
+| 运行     | `docker run --name container-name -d image-name`<br />`eg:docker run ––name myredis –d redis` | `--name`：自定义容器名<br />`-d`：后台运行<br/>`image-name` : 指定镜像模板 |
 | 列表     | `docker ps`（查看运行中的容器）；                            | 加上`-a`；可以查看所有容器                                   |
 | 停止     | `docker stop container-name/container-id`                    | 停止当前你运行的容器                                         |
 | 启动     | `docker start container-name/container-id`                   | 启动容器                                                     |
 | 删除     | `docker rm container-id`                                     | 删除指定容器                                                 |
 | 端口映射 | `-p 6379:6379`<br>`eg:docker run -d -p 6379:6379 --name myredis docker.io/redis` | `-p`: 主机端口(映射到)容器内部的端口                         |
-| 容器日志 | docker logs container-name/container-id                      |                                                              |
+| 容器日志 | `docker logs container-name/container-id`                    |                                                              |
+
+> 其中`container-name`表示容器的名字，`container-id`表示容器的id；
 
 更多命令: https://docs.docker.com/engine/reference/commandline/docker/
 
@@ -4111,15 +4109,13 @@ https://docs.docker.com/engine/reference/commandline/docker/
 docker pull mysql
 ```
 
-
-
 错误的启动
 
 ```shell
 [root@localhost ~]# docker run --name mysql01 -d mysql
 42f09819908bb72dd99ae19e792e0a5d03c48638421fa64cce5f8ba0f40f5846
 
-mysql退出了
+mysql退出了(出现异常)
 [root@localhost ~]# docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                           PORTS               NAMES
 42f09819908b        mysql               "docker-entrypoint.sh"   34 seconds ago      Exited (1) 33 seconds ago                            mysql01
@@ -4128,14 +4124,13 @@ goldstine
 c4f1ac60b3fc        tomcat              "catalina.sh run"        About an hour ago   Exited (143) About an hour ago                       lonely_fermi
 81ec743a5271        tomcat              "catalina.sh run"        About an hour ago   Exited (143) About an hour ago                       sick_ramanujan
 
-
 //错误日志
 [root@localhost ~]# docker logs 42f09819908b
 error: database is uninitialized and password option is not specified 
   You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD；这个三个参数必须指定一个
 ```
 
-正确的启动
+正确的启动(还是不能使用，没有做映射)
 
 ```shell
 [root@localhost ~]# docker run --name mysql01 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
@@ -4145,7 +4140,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 b874c56bec49        mysql               "docker-entrypoint.sh"   4 seconds ago       Up 3 seconds        3306/tcp            mysql01
 ```
 
-做了端口映射
+做了端口映射` -p 3306:3306`
 
 ```shell
 [root@localhost ~]# docker run -p 3306:3306 --name mysql02 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
@@ -4155,11 +4150,9 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ad10e4bc5c6a        mysql               "docker-entrypoint.sh"   4 seconds ago       Up 2 seconds        0.0.0.0:3306->3306/tcp   mysql02
 ```
 
+几个其他的高级操作(详细参考官方文档)
 
-
-几个其他的高级操作
-
-```
+```shell
 docker run --name mysql03 -v /conf/mysql:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 把主机的/conf/mysql文件夹挂载到 mysqldocker容器的/etc/mysql/conf.d文件夹里面
 改mysql的配置文件就只需要把mysql配置文件放在自定义的文件夹下（/conf/mysql）
@@ -4167,3 +4160,354 @@ docker run --name mysql03 -v /conf/mysql:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWOR
 docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 指定mysql的一些配置参数
 ```
+
+***
+
+## 六、SpringBoot与数据访问
+
+### 1、JDBC
+
+![](images/sb91_data2.png)
+
+`pom.xml`基本配置:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+`application.yml`简单配置:
+
+```yaml
+spring:
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/springboot_jdbc
+    driver-class-name: com.mysql.jdbc.Driver
+```
+
+效果：
+
+* `SpringBoot1.XX`默认是用`org.apache.tomcat.jdbc.pool.DataSource`作为数据源；`SpringBoot2.XX`默认使用`com.zaxxer.hikari.HikariDataSource`(很快)作为数据源；
+
+* 数据源的相关配置都在`DataSourceProperties`里面；
+
+自动配置原理都在这个包下:`org.springframework.boot.autoconfigure.jdbc`
+
+1、参考`DataSourceConfiguration`，根据配置创建数据源，`SpringBoot1.0X`默认使用Tomcat连接池、`SpringBoot2.0X`默认使用`HikariDataSource`数据源。
+
+2、可以使用`spring.datasource.type`指定自定义的数据源类型；
+
+3、SpringBoot默认可以支持
+
+```
+org.apache.tomcat.jdbc.pool.DataSource、HikariDataSource、BasicDataSource.
+```
+
+4、自定义数据源类型
+
+```java
+@ConditionalOnMissingBean({DataSource.class})
+@ConditionalOnProperty(
+    name = {"spring.datasource.type"}
+)
+static class Generic {
+    Generic() {
+    }
+    @Bean
+    public DataSource dataSource(DataSourceProperties properties) {
+        //使用DataSourceBuilder创建数据源，利用反射创建响应type的数据源，并且绑定相关属性
+        return properties.initializeDataSourceBuilder().build();
+    }
+}
+
+```
+
+5、`DataSourceAutoConfiguration`中的`DataSourceInitializer`(是一个`ApplicationListener`)
+
+```java
+@Configuration
+@ConditionalOnClass({DataSource.class, EmbeddedDatabaseType.class})
+@EnableConfigurationProperties({DataSourceProperties.class})
+@Import({Registrar.class, DataSourcePoolMetadataProvidersConfiguration.class})
+public class DataSourceAutoConfiguration {
+    private static final Log logger = LogFactory.getLog(DataSourceAutoConfiguration.class);
+
+    public DataSourceAutoConfiguration() {
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    // 
+    public DataSourceInitializer dataSourceInitializer(DataSourceProperties properties, ApplicationContext applicationContext) {
+        return new DataSourceInitializer(properties, applicationContext);
+    }
+}
+```
+
+作用:
+
+* `runSchemaScripts();`运行建表语句；
+
+* `runDataScripts();`运行插入数据的sql语句；
+
+默认只需要将文件命名为下面的方式，启动项目就会自动根据SQL文件创建表。(一定要是`SpringBoot.10XX`)
+
+```properties
+schema-*.sql、data-*.sql
+1、默认规则：schema.sql，schema-all.sql；
+2、可以使用下面的方式指定位置
+	schema:
+      - classpath:department.sql
+    # springBoot2.0以上要加上下面才会起作用  
+    initialization-mode: always # 程序启动时会默认执行sql脚本
+```
+
+注意如果是`SpringBoot2.0X`在启动的时候如果要创建数据表，要添加一句:`initialization-mode: always #`
+
+![](images/sb90_data1.png)
+
+默认配置的相关源码:
+
+```java
+private List<Resource> getScripts(String propertyName, List<String> resources, String fallback) {
+    if (resources != null) {
+        return this.getResources(propertyName, resources, true);
+    } else {
+        String platform = this.properties.getPlatform();
+        List<String> fallbackResources = new ArrayList();
+        // fallback 就是 "schema"
+        fallbackResources.add("classpath*:" + fallback + "-" + platform + ".sql");
+        fallbackResources.add("classpath*:" + fallback + ".sql");
+        return this.getResources(propertyName, fallbackResources, false);
+    }
+}
+```
+
+6、操作数据库：自动配置了`JdbcTemplate`操作数据库；
+
+JDBCTemplate简单测试: 
+
+编写的`Controller`:
+
+```java
+@Controller
+public class QueryDBTestController {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @ResponseBody
+    @GetMapping("/query")
+    public Map<String, Object> queryDB(){
+        List<Map<String,Object>> list = jdbcTemplate.queryForList("select * from student");
+        return list.get(0);
+    }
+}
+```
+
+![](images/sb92_data3.png)
+
+### 2、整合Druid数据源
+
+> 项目:springboot_06_data_druid
+
+启动报错问题解决博客:
+
+> 博客: https://blog.csdn.net/xingkongtianma01/article/details/81624313
+
+改变默认的数据源需要配置`type`属性:
+
+```yaml
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/springboot
+    driver-class-name: com.mysql.jdbc.Driver
+    # 改变默认的数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# Druid的一些默认配置,可以发现下面这些是黄色的，需要在配置类中配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+#   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+```
+
+Druid的相关配置：
+
+* 一定需要编写一个`Configuration`配置类，并且绑定`spring.datasources`，不然配置不会生效；
+* 配置Druid的监控功能需要编写Servlet和Filter，指定访问路径以及相关用户名和密码，具体配置如下；
+
+```java
+@Configuration
+public class DruidConfig {
+
+    @ConfigurationProperties(prefix = "spring.datasource") // 必须要配置这个，不能单单在配置文件中配置
+    @Bean
+    public DataSource druid(){
+        return new DruidDataSource();
+    }
+
+    // 配置Druid的监控
+    // 1、配置一个管理后台的Servlet
+    @Bean
+    public ServletRegistrationBean statViewServlet(){
+        ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
+        Map<String, String> initParams = new HashMap<>();
+        initParams.put("loginUsername", "admin");
+        initParams.put("loginPassword", "root");
+        initParams.put("allow", "");// 默认就是允许所有访问
+        initParams.put("deny", "192.168.43.100");
+        bean.setInitParameters(initParams);
+        return bean;
+    }
+
+    // 2、配置web监控的filter
+    @Bean
+    public FilterRegistrationBean webStatFilter(){
+        FilterRegistrationBean bean = new FilterRegistrationBean();
+        bean.setFilter(new WebStatFilter());
+        Map<String, String> initParams = new HashMap<>();
+        initParams.put("exclusions", "*.js,*.css,/druid/*");
+        bean.setInitParameters(initParams);
+        bean.setUrlPatterns(Arrays.asList("/*"));
+        return bean;
+    }
+}
+```
+
+效果:
+
+![](images/sb93_data4.png)
+
+### 3、整合Mybatis
+
+`pom.xml`导入依赖:
+
+```xml
+<dependency>
+    <groupId>org.mybatis.spring.boot</groupId>
+    <artifactId>mybatis-spring-boot-starter</artifactId>
+    <version>2.0.0</version>
+</dependency>
+```
+
+`mybatis-starter`的依赖图:
+
+![](images/sb94_data5.png)
+
+步骤：
+
+​	1）、配置数据源相关属性；（见上一节Druid）
+
+​	2）、给数据库建表；
+
+​	3）、创建`JavaBean`；
+
+#### 1)、注解版
+
+只需要编写Mapper即可。
+
+```java
+// 指定这是一个操作数据库的mapper
+@Mapper
+public interface DepartmentMapper {
+
+    @Select("select * from department where id=#{id}")
+    public Department getDeptById(Integer id);
+
+    @Delete("delete from department where id=#{id}")
+    public int deleteDeptById(Integer id);
+
+    //因为id是自增的
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    @Insert("insert into department(departmentName) values(#{departmentName})")
+    public int insertDept(Department department);
+
+    @Update("update department set departmentName=#{departmentName} where id=#{id}")
+    public int updateDept(Department department);
+}
+```
+
+Controller:
+
+```java
+@RestController // 包括了
+public class DeptController {
+
+    @Autowired
+    DepartmentMapper departmentMapper;
+
+    @GetMapping("/dept/{id}")
+    public Department getDepartMent(@PathVariable("id") Integer id){
+        return departmentMapper.getDeptById(id);
+    }
+
+    @GetMapping("/dept")
+    public Department insertDept(Department department){
+        departmentMapper.insertDept(department);
+        return department;
+    }
+}
+```
+
+测试:
+
+![](images/sb95_data6.png)
+
+![](images/sb96_data7.png)
+
+自定义的规则:在`Configuration`中编写`ConfigurationCustomizer`即可(自定义Mybatis的配置规则)。
+
+```java
+@Configuration
+public class MyBatisConfig {
+
+    @Bean
+    public ConfigurationCustomizer configurationCustomizer() {
+        return new ConfigurationCustomizer() {
+            @Override
+            public void customize(org.apache.ibatis.session.Configuration configuration) {
+                // 开启驼峰命名 department_name和departName映射
+                configuration.setMapUnderscoreToCamelCase(true);
+            }
+        };
+    }
+}
+```
+
+可以将`@MapperScan`标注在主配置类中，这样就不需要在所有的Mapper接口上都标注`@Mapper`注解了。
+
+```java
+@MapperScan(value = "com.zxin.springboot.mapper") //这个包下都是Mapper，不需要标注Mapper注解
+```
+
+#### 2)、配置文件版
+
+### 4、整合SprintData JPA
+
+#### 1)、SpringData简介
+
+#### 2)、整合SpringData JPA

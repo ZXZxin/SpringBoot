@@ -21,6 +21,9 @@
         <option value="$PROJECT_DIR$/springboot_04_web_witherrorhandle/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_withservletcontainer/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_web_withservletcontainer_external/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_06_data_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_06_data_druid/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_06_data_mybatis/pom.xml" />
       </list>
     </option>
   </component>
