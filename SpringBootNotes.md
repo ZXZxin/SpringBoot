@@ -4590,6 +4590,80 @@ public class EmpController {
 
 #### 1)、SpringData简介
 
-
+![](images/sb98_data9.png)
 
 #### 2)、整合SpringData JPA
+
+JPA:ORM（Object Relational Mapping）, 操作步骤如下:
+
+1）、编写一个实体类（bean）和数据表进行映射，并且配置好映射关系；
+
+这里的表不需要自己手动创建，JPA会自动创建。
+
+```java
+//使用JPA注解配置映射关系
+@Entity //告诉JPA这是一个实体类（和数据表映射的类）
+@Table(name = "tbl_user") //@Table来指定和哪个数据表对应;如果省略默认表名就是user；
+public class User {
+
+    @Id //这是一个主键
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//自增主键
+    private Integer id;
+
+    @Column(name = "last_name",length = 50) //这是和数据表对应的一个列
+    private String lastName;
+    @Column //省略默认列名就是属性名
+    private String email;
+}
+```
+
+2）、编写一个Dao接口来操作实体类对应的数据表（Repository）(有一些自动的方法，所以这里啥也不需要写)
+
+```java
+//继承JpaRepository来完成对数据库的操作, 第一个参数是要操作的实体，第二个参数是实体的主键的类型
+public interface UserRepository extends JpaRepository<User,Integer> {
+
+}
+```
+
+3）、基本的配置`JpaProperties`
+
+```yaml
+  jpa:
+    hibernate:
+#     更新或者创建数据表结构(第一次是创建，后面是更新)
+      ddl-auto: update
+#    控制台显示SQL
+    show-sql: true
+
+```
+
+测试代码:
+
+```java
+@RestController
+public class UserController {
+
+    @Autowired
+    UserRepository userRepository;
+
+    @GetMapping("/user/{id}")
+    public User getUser(@PathVariable("id") Integer id){
+//        User user = userRepository.getOne(id); // 不是findOne()(SpringBoot1.0的)
+        User user = userRepository.findAll().get(0); // 不是findOne()(SpringBoot1.0的)
+
+        return user;
+    }
+
+    @GetMapping("/user")
+    public User insertUser(User user){
+        User save = userRepository.save(user);
+        return save;
+    }
+}
+
+```
+
+测试结果:
+
+![](images/sb99_data10.png)

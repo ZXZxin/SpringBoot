@@ -23,6 +23,7 @@
         <module name="springboot_04_web_withservletcontainer_external" />
         <module name="springboot_06_data_druid" />
         <module name="springboot_06_data_jdbc" />
+        <module name="springboot_06_data_jpa" />
         <module name="springboot_06_data_mybatis" />
         <module name="springboot_06_data_mybatis_2" />
       </profile>
@@ -49,6 +50,7 @@
       <module name="springboot_04_web_withservletcontainer_external" target="1.8" />
       <module name="springboot_06_data_druid" target="1.8" />
       <module name="springboot_06_data_jdbc" target="1.8" />
+      <module name="springboot_06_data_jpa" target="1.8" />
       <module name="springboot_06_data_mybatis" target="1.8" />
       <module name="springboot_06_data_mybatis_2" target="1.8" />
     </bytecodeTargetLevel>
